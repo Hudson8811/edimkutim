@@ -23,6 +23,7 @@ fieldset{
     border: none;
     padding: 0;
     transition: .3s;
+    margin: 0;
 }
 .msf_hide{
    height: 0;
@@ -55,6 +56,7 @@ header{
  .main{
     /* 1 flex-grow, 0 flex-shrink, auto flex-basis */
     flex: 1 0 auto;
+     position: relative;
  }
  footer{
     /* 0 flex-grow, 0 flex-shrink, auto flex-basis */
@@ -201,9 +203,23 @@ header{
 }
 .steps{
     margin-top: vw(-46);
-    position: relative;
     min-height: 100%;
-    padding-bottom: vw(35);
+    padding-bottom: vw(30);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    >:first-child{
+        &:before{
+            content: '';
+            position: absolute;
+            height: vw(413);
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: url(../img/catalog-before.png);
+        }
+    }
     &__title{
         margin-bottom: vw(35);
         font-weight: bold;
@@ -294,7 +310,7 @@ header{
         font-family: $monser;
         color: $darkgreen;
         text-align: center;
-        margin-top: vw(37);
+        margin-top: vw(18);
     }
     &__img-right,&__img-left{
         position: absolute;
@@ -314,15 +330,6 @@ header{
 }
 .catalog{
     position: relative;
-    &:before{
-        content: '';
-        position: absolute;
-        height: vw(413);
-        top: 29%;
-        left: 0;
-        width: 100%;
-        background: url(../img/catalog-before.png);
-    }
     &__row{
         position: relative;
         z-index: 15;
@@ -340,7 +347,7 @@ header{
         }
 
         &-img-container{
-            height: vw(250);
+            height: vw(210);
             display: flex;
             align-items: flex-end;
             justify-content: center;
@@ -381,7 +388,6 @@ header{
 
 
 }
-
 fieldset{
     input[name="back"]{
         display: none;
