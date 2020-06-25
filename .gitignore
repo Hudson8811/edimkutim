@@ -1,2 +1,7 @@
 node_modules
 app/debug.log
+.idea/workspace.xml
+.idea/vcs.xml
+.idea/modules.xml
+.idea/misc.xml
+.idea/edimkutim.iml

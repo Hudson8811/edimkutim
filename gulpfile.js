@@ -30,6 +30,7 @@ gulp.task('css', function(){
     'node_modules/normalize.css/normalize.css',
     'assest/css/animate.css',
     'assest/css/swiper.css',
+    'assest/css/jquery.scrollbar.css',
 
   ])
     .pipe(concat('_libs.scss'))
@@ -51,6 +52,7 @@ gulp.task('js', function(){
   return gulp.src([
     'assest/js/wow.min.js',
     'assest/js/swiper.js',
+    'assest/js/jquery.scrollbar.min.js',
   ])
     .pipe(concat('libs.min.js'))
     .pipe(uglify())

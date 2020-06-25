@@ -51,6 +51,7 @@ var party_style = new Swiper('.party-style .swiper-container', {
       },
   });
 
+
 //   $('.prizes__single-slider .swiper-container').each(function(){
 //     var prizes__single_slider = new Swiper(this, {
      
@@ -82,3 +83,28 @@ var wow = new WOW({
 new WOW().init();
 
 
+var receptsSlider = new Swiper('.recepts__slider .swiper-container', {
+    slidesPerView:1,
+    effect: 'fade',
+    loop: true,
+    simulateTouch: false,
+    navigation: {
+        nextEl: '.recept-next',
+        prevEl: '.recept-prev',
+    },
+});
+
+jQuery(document).ready(function(){
+    jQuery('.scrollbar-macosx').scrollbar();
+    $('#recepts').addClass('hide');
+});
+
+$('.recepts__close').click(function () {
+    event.preventDefault();
+    $('#recepts').addClass('hide');
+});
+
+$('.js-show-recepts').click(function () {
+    event.preventDefault();
+    $('#recepts').removeClass('hide');
+});

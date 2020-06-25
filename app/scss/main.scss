@@ -30,7 +30,9 @@ fieldset{
    position: relative;
    overflow: hidden;
    visibility: hidden;
-    display: none;
+    &:first-child{
+        display: none;
+    }
   }
   .msf_show{
     position: static;
@@ -122,6 +124,7 @@ header{
 .header{
     position: relative;
     padding: vw(9) 0 vw(63);
+    z-index: 101;
     &:before{
         content: '';
         position: absolute;
@@ -722,4 +725,168 @@ fieldset{
         }
     }
 
+}
+
+
+.recept-button{
+    height: vw(35);
+    width: vw(30);
+    background: url(../img/slider-arrow-right.svg) no-repeat center center;
+    background-size: contain;
+    cursor: pointer;
+    &.recept-prev{
+        transform: rotate(180deg);
+        margin-right: vw(45);
+    }
+    &.recept-next{
+        margin-left: vw(45);
+    }
+}
+
+.recepts {
+    box-sizing: border-box;
+    padding-top: vw(60);
+    background: #ffffff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: 100;
+    width: 100%;
+    &.hide{
+        height: 0;
+        position: relative;
+        overflow: hidden;
+        visibility: hidden;
+    }
+    &__slide{
+        background: #ffffff;
+    }
+    &__close{
+        position: absolute;
+        width: vw(22);
+        display: block;
+        left: 50%;
+        top: vw(6);
+        transform: translateX(-50%);
+        background: none;
+        padding: 0;
+        max-height: 0;
+        border: 0;
+        cursor: pointer;
+        svg{
+            width: 100%;
+        }
+    }
+    &__title{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        text-align: center;
+        span{
+            font-weight: bold;
+            font-size: vw(50);
+            line-height: vw(61);
+            text-align: center;
+            text-transform: uppercase;
+            color: #111C4E;
+            font-family: $monser;
+        }
+    }
+    &__flex{
+        display: flex;
+        padding-top: vw(10);
+        justify-content: center;
+        height: 100%;
+        align-items: flex-start;
+        height: calc(100vh - 12.23958vw);
+    }
+    &__left{
+        width: vw(470);
+        display: flex;
+        justify-content: space-between;
+        padding-top: vw(40);
+        box-sizing: border-box;
+        height: 100%;
+        overflow: auto;
+    }
+    &__center{
+        width: vw(665);
+        height: 100%;
+    }
+    &__right{
+        width: vw(570);
+        margin-left: vw(44);
+        height: 100%;
+        overflow: auto;
+    }
+    &__col{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &:nth-child(1){
+            width: vw(305);
+        }
+        &:nth-child(2){
+            width: vw(155);
+            margin-top: vw(30);
+        }
+    }
+    &__ind{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: vw(20);
+        +.recepts__ind{
+            margin-top: vw(25);
+        }
+        &-img{
+            display: flex;
+            justify-content: center;
+            margin-bottom: vw(13);
+        }
+        &-title{
+            font-size: vw(30);
+            line-height: vw(30);
+            font-weight: bold;
+            text-align: center;
+            text-transform: uppercase;
+            color: #444444;
+        }
+        &-text{
+            font-family: $monser;
+            font-size: vw(19);
+            margin-top: vw(5);
+        }
+    }
+    &__img{
+        width: 100%;
+        height: 100%;
+        img{
+            display: block;
+            width: 100%;
+            max-height: 100%;
+            margin: 0 auto;
+            object-fit: contain;
+        }
+    }
+    &__step{
+        margin-bottom: vw(20);
+        + .recepts__step{
+            margin-top: vw(40);
+        }
+        &-title{
+            font-weight: bold;
+            font-size: vw(30);
+            line-height: vw(30);
+            text-transform: uppercase;
+            color: #323232;
+        }
+        &-text{
+            font-family: $monser;
+            font-size: vw(19);
+            margin-top: vw(5);
+        }
+    }
 }
