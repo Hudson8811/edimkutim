@@ -30,6 +30,7 @@ fieldset{
    position: relative;
    overflow: hidden;
    visibility: hidden;
+    display: none;
   }
   .msf_show{
     position: static;
@@ -207,9 +208,9 @@ header{
     padding-bottom: vw(30);
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-
+    justify-content: center;
     >:first-child{
+        margin-top: auto;
         &:before{
             content: '';
             position: absolute;
