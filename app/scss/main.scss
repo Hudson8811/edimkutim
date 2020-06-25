@@ -220,6 +220,9 @@ header{
             width: 100%;
             background: url(../img/catalog-before.png);
         }
+        input[name="next"]{
+            margin-top: vw(40);
+        }
     }
     &__title{
         margin-bottom: vw(35);
@@ -260,25 +263,25 @@ header{
     padding: vw(28) 0 vw(27);
     &__logo{
         position: relative;
-        width: vw(282);
-        height: vw(157);
+        width: vw(251);
+        height: vw(145);
         margin: 0 auto;
         &-left-img{
             position: absolute;
             right: 100%;
             top: 50%;
-            margin-top: vw(-78);
-            width: vw(137);
-            height: vw(156);
+            margin-top: vw(-63);
+            width: vw(122);
+            height: vw(139);
             margin-right: vw(14);
         }
         &-right-img{
             position: absolute;
             left: 100%;
             top: 50%;
-            margin-top: vw(-78);
-            width: vw(137);
-            height: vw(156);
+            margin-top: vw(-63);
+            width: vw(122);
+            height: vw(139);
             margin-left: vw(14);
         }
         &-img{
@@ -290,8 +293,8 @@ header{
     }
     &__slogan{
         margin: vw(8) 0 0;
-        font-size: vw(75);
-        line-height: vw(91);
+        font-size: vw(70);
+        line-height: vw(80);
         color: $darkgreen;
         text-align: center;
         font-family: $monser;
