@@ -1,0 +1,322 @@
+@media all and (max-width: 1024px) {
+    html{
+    }
+    body{
+    }
+    fieldset{
+    }
+    .msf_hide{
+        &:first-child{
+        }
+    }
+    .msf_show{
+    }
+    a{
+    }
+    img{
+    }
+    p{
+    }
+    button{
+    }
+
+    header{
+    }
+    .main{
+    }
+    footer{
+    }
+    .burger{
+    }
+    .rect {
+    }
+
+    .rect+.rect{}
+
+    .rect:nth-child(2) {
+    }
+
+    .rect:nth-child(3) {
+    }
+
+    .burger.active .rect:nth-child(1) {
+    }
+
+    .burger.active .rect:nth-child(2) {
+    }
+
+    .burger.active .rect:nth-child(3) {
+    }
+
+    .wrapper{
+
+    }
+    .header{
+        &:before{
+        }
+        &__container{
+        }
+        &__decor-left{
+        }
+        &__decor-right{
+        }
+        &__logo{
+            &--js-active{
+            }
+
+            &-img{
+            }
+        }
+    }
+    .container{
+    }
+    .menu{
+        &__list{
+        }
+        &__list-item{
+        }
+        &__link{
+            &--active,&:hover{
+            }
+        }
+    }
+    .steps{
+        >fieldset:first-child{
+            &:before{
+            }
+            input[name="next"]{
+            }
+        }
+        &__title{
+        }
+        &__desc{
+        }
+        &__left-img{
+        }
+        &__right-img{
+        }
+    }
+    .hero{
+        &__logo{
+            &-left-img{
+            }
+            &-right-img{
+            }
+            &-img{
+            }
+        }
+        &__slogan{
+        }
+        &__text{
+        }
+        &__desc{
+        }
+        &__img-right,&__img-left{
+        }
+        &__img-left{
+        }
+        &__img-right{
+        }
+    }
+    .catalog{
+        &__row{
+        }
+        &__slider{
+        }
+        &__item{
+            &--lit{
+            }
+            &--big{
+            }
+
+            &-img-container{
+            }
+            &-img{
+            }
+            input{
+            }
+            input:checked + .catalog__item-check{
+                &:before{
+                }
+            }
+            &-check{
+                &:before{
+                }
+            }
+        }
+
+
+    }
+    fieldset{
+        input[name="back"]{
+        }
+        input[name="next"]{
+            &:hover{
+            }
+
+        }
+    }
+    .button-decor{
+        &:before{
+        }
+    }
+    .party-style{
+        &__slider{
+            .swiper-button-prev:after, .swiper-button-next:after{
+            }
+            .swiper-button{
+            }
+            .swiper-button-prev{
+            }
+        }
+        &__image-container{
+        }
+        &__image{
+        }
+        .swiper-slide{
+        }
+        &__slide-name{
+            span{
+            }
+        }
+    }
+    .party-personas{
+        &__row{
+        }
+        &__slider{
+            .swiper-button{
+            }
+            .swiper-button:after{
+            }
+            .swiper-container{
+                width: 100%;
+            .swiper-button-prev{
+            }
+            .swiper-button-next{
+            }
+            .swiper-slide{
+            }
+        }
+        &__image-container{
+        }
+        &__image{
+        }
+        &__name{
+            &::placeholder{
+            }
+        }
+        &__custom{
+        }
+    }
+
+    }
+    #label-for-pct{
+    }
+    .prizes{
+        &__title{
+            &--big{
+            }
+            &--lit{
+            }
+        }
+        &__text{
+        }
+
+        &__single-slider{
+            &-image-container{
+            }
+            &-image{
+            }
+            .swiper-button-prev:after, .swiper-button-next:after{
+            }
+            .swiper-button{
+            }
+            .swiper-button-prev{
+            }
+            .swiper-slide{
+            }
+        }
+        &__three-slider{
+            &-image-container{
+            }
+            &-image{
+            }
+            &-name{
+                span{
+                }
+            }
+            .swiper-button-prev:after, .swiper-button-next:after{
+            }
+            .swiper-button{
+            }
+            .swiper-button-prev{
+            }
+            .swiper-slide{
+            }
+        }
+        &__button{
+            &:hover{
+            }
+        }
+
+    }
+
+
+    .recept-button{
+        &.recept-prev{
+        }
+        &.recept-next{
+        }
+    }
+
+    .recepts {
+        &.hide{
+        }
+        &__slide{
+        }
+        &__close{
+            svg{
+            }
+        }
+        &__title{
+            span{
+            }
+        }
+        &__flex{
+        }
+        &__left{
+        }
+        &__center{
+        }
+        &__right{
+        }
+        &__col{
+            &:nth-child(1){
+            }
+            &:nth-child(2){
+            }
+        }
+        &__ind{
+            +.recepts__ind{
+            }
+            &-img{
+            }
+            &-title{
+            }
+            &-text{
+            }
+        }
+        &__img{
+            img{
+            }
+        }
+        &__step{
+            + .recepts__step{
+            }
+            &-title{
+            }
+            &-text{
+            }
+        }
+    }
+}

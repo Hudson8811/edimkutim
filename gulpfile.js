@@ -31,6 +31,7 @@ gulp.task('css', function(){
     'assest/css/animate.css',
     'assest/css/swiper.css',
     'assest/css/jquery.scrollbar.css',
+    'assest/css/slick.css',
 
   ])
     .pipe(concat('_libs.scss'))
@@ -53,6 +54,7 @@ gulp.task('js', function(){
     'assest/js/wow.min.js',
     'assest/js/swiper.js',
     'assest/js/jquery.scrollbar.min.js',
+    'assest/js/slick.min.js',
   ])
     .pipe(concat('libs.min.js'))
     .pipe(uglify())

@@ -44,16 +44,11 @@ var party_style = new Swiper('.party-style .swiper-container', {
   });
 
   var party_style = new Swiper('.prizes__three-slider .swiper-container', {
-    slidesPerView:2,
+    slidesPerView:3,
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
       },
-      breakpoints: {
-          1024: {
-              slidesPerView: 3,
-          },
-      }
   });
 
 
@@ -112,70 +107,31 @@ $('.recepts__close').click(function () {
 $('.js-show-recepts').click(function () {
     event.preventDefault();
     $('#recepts').removeClass('hide');
-    $('.header').removeClass('active');
 });
 
 
 
-
 $(document).ready(function(){
-    function colRec(){
-        $('.recepts__left').each(function () {
-            $(this).find('.recepts__col-2 .recepts__ind').addClass('moved');
-            var right = $(this).find('.recepts__col-1')
-            $(this).find('.moved').appendTo(right);
-        });
-    };
-
-    function colRecBack(){
-        $('.recepts__left').each(function () {
-            var right = $(this).find('.recepts__col-2')
-            $(this).find('.moved').appendTo(right);
-            $(this).find('.recepts__col-2 .recepts__ind').removeClass('moved');
-        });
-    };
-
-
     plansSlider = undefined;
-    if ($(window).width() <= 1024) {
-        plansSlider = $('.catalog__slider').slick({
-            arrows: true,
-            dots: false,
-            slidesToShow: 2,
-            slidesToScroll: 2
+    if ($(window).width() <= 1024)
+        plansSlider = $('.catalog__slider1').slick({
+            arrows: false,
+            dots: true,
         });
-        colRec();
-    }
-
 
     $(window).on('resize', function(){
         if ($(window).width() <= 1024){
             if (!plansSlider) {
                 plansSlider = $('.catalog__slider').slick({
-                    arrows: true,
-                    dots: false,
-                    slidesToShow: 2,
-                    slidesToScroll: 2
+                    arrows: false,
+                    dots: true,
                 });
-                colRec();
             }
         } else {
             if (plansSlider) {
                 $('.catalog__slider').slick('unslick');
                 plansSlider = undefined;
-                colRecBack();
             }
         }
-    });
-
-    $('.header__burger').click(function () {
-        $('.header').addClass('active');
-    });
-    $('.header__close').click(function () {
-        $('.header').removeClass('active');
-    });
-
-    $('.js-dot').click(function () {
-       $(this).closest('.dot').toggleClass('active');
     });
 });
