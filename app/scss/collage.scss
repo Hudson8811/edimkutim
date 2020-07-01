@@ -1,0 +1,303 @@
+.collage-flex {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 184px;
+    margin-right: 60px;
+}
+
+.collage-info {
+    background: linear-gradient(0deg, #FFFFFF, #FFFFFF), url(12421412412.jpg);
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    position: relative;
+    padding: 52px 78px 52px 150px;
+    margin-top: 83px;
+
+    &__logo {
+        position: absolute;
+        top: 52px;
+        left: 50px;
+        width: 70px;
+        height: 70px;
+    }
+
+    &__type {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+        font-size: 32px;
+        line-height: 39px;
+
+        color: #2D3A67;
+    }
+
+    &__title {
+        font-weight: bold;
+        font-size: 96px;
+        line-height: 96px;
+
+        color: #76BC21;
+        margin-top: 2px;
+    }
+
+    &__go {
+        font-weight: bold;
+        font-size: 30px;
+        line-height: 30px;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: #27376B;
+        margin-top: 17px;
+    }
+
+    img {}
+
+
+}
+
+.collage-info__go-link {
+    display: block;
+    color: #f440bc;
+    text-decoration: underline;
+    transition-duration: .2s;
+
+    &:hover {
+        text-decoration: none;
+    }
+
+    &:active {}
+
+    &:focus {}
+}
+
+.collage-info__socials {
+    margin-top: 17px;
+}
+
+.share-socials {
+    display: flex;
+}
+
+.share-social {
+    width: 59px;
+    height: 59px;
+    display: block;
+    background: #27376B;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        width: 30px;
+        height: 30px;
+        object-fit: contain;
+        object-position: center center;
+        display: block;
+    }
+
+    transition-duration: .4s;
+
+    &:hover {
+        background: #76AA4E;
+    }
+
+    &:active {}
+
+    &:focus {}
+
+    &:not(:last-child) {
+        margin-right: 17px;
+    }
+}
+
+.collage-recipe {
+    flex-grow: 1;
+    margin-top: 78px;
+    margin-left: 20px;
+}
+
+.collage-recipe-pics {
+    position: relative;
+    height: 369px;
+    width: 826px;
+
+    &__pic {
+        display: block;
+        object-fit: contain;
+        object-position: center center;
+        position: absolute;
+        height: auto;
+
+        &--sauce {
+            width: 87px;
+            transform: rotate(-18.78deg);
+
+            left: 65px;
+            top: 32px;
+        }
+
+        &--pizza {
+            width: 369px;
+            left: 178px;
+        }
+
+        &--mayonnaise {
+            width: 182px;
+            transform: rotate(26.53deg);
+            right: 43px;
+            top: 67px;
+        }
+
+    }
+
+
+
+}
+
+.collage-recipe-info {
+    text-align: center;
+
+    margin-right: 88px;
+    margin-top: 15px;
+
+    &__name {
+        display: block;
+        font-weight: bold;
+        font-size: 30px;
+        line-height: 30px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #76BC21;
+    }
+
+    &__view {
+        display: block;
+        font-family: 'Montserrat', sans-serif;
+        margin-top: 10px;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 22px;
+        text-align: center;
+        text-decoration-line: underline;
+
+        color: #27376B;
+
+        &:hover {}
+
+        &:active {}
+
+        &:focus {}
+    }
+}
+
+
+.wrapper {
+    &--collage {
+        max-height: 100vh;
+        overflow: hidden;
+        position: relative;
+
+        background-position: top center, center center;
+        background-size: 100% auto, cover;
+        background-repeat: no-repeat, no-repeat;
+
+        .collage-info {
+
+            &::after {
+                content: '';
+                display: block;
+                position: absolute;
+                right: -60px;
+                bottom: -60px;
+                width: 241px;
+                height: 194px;
+                background-size: contain;
+                background-position: center center;
+                background-repeat: no-repeat;
+
+            }
+        }
+
+        &-hawaii {
+            background-image: url(../img/collage/topHawaii.png), url(../img/collage/bgHawaii.png);
+
+            .collage-info {
+                &::after {
+                    background-image: url(../img/collage/Hawaii.png);
+                    right: -81px;
+                    bottom: -60px;
+                }
+            }
+        }
+
+        &-disco {
+            background-image: url(../img/collage/topDisco.png), url(../img/collage/bgDisco.png);
+
+            .collage-info {
+                &::after {
+                    background-image: url(../img/collage/Disco.png);
+                    width: 238px;
+                    height: 241px;
+                }
+            }
+        }
+
+        &-gatsby {
+            background-image: url(../img/collage/topGatsby.png), url(../img/collage/bgGatsby.png);
+
+            .collage-info {
+                &::after {
+                    background-image: url(../img/collage/Gatsby.png);
+                    width: 132px;
+                    height: 177px;
+                    right: -15px;
+                    bottom: -30px;
+                }
+            }
+        }
+
+        &-rock {
+            background-image: url(../img/collage/topRock.png), url(../img/collage/bgRock.png);
+
+            .collage-info {
+                &::after {
+                    background-image: url(../img/collage/Rock.png);
+                    width: 175px;
+                    height: 145px;
+                    right: -36px;
+                    bottom: -25px;
+                }
+            }
+        }
+
+        &-asian {
+            background-image: url(../img/collage/topAsian.png), url(../img/collage/bgAsian.png);
+
+            .collage-info {
+                &::after {
+                    background-image: url(../img/collage/Asian.png);
+                    width: 202px;
+                    height: 157px;
+                    right: -70px;
+                    bottom: -38px;
+                }
+            }
+        }
+
+        &-chelentano {
+            background-image: url(../img/collage/topChelentano.png), url(../img/collage/bgChelentano.png);
+
+            .collage-info {
+                &::after {
+                    background-image: url(../img/collage/Chelentano.png);
+                    width: 165px;
+                    height: 154px;
+                    right: -39px;
+                    bottom: -9px;
+                }
+            }
+        }
+    }
+}
+
+@import 'collage-adaptive';

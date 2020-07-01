@@ -20,7 +20,9 @@ $media-direction: max !default;
 @function vw2($px) {
   @return (($px/$resolution2) * 100)+vw;
 }
-
+@function vw9($px) {
+  @return (($px/414) * 100)+vw;
+}
 @mixin for-xl {
     @media (max-width: 1300px) { @content; }
   }
