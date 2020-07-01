@@ -82,7 +82,7 @@ header{
     display: inline-block;
     height: vw2(6);
     border-radius: vw2(20);
-  
+
     transition: transform 500ms;
     width: vw2(31);
   }
@@ -119,7 +119,7 @@ background-color: $white;
     display: flex;
     flex-direction: column;
     height: 100%;
-    
+
 }
 
 .header{
@@ -289,7 +289,7 @@ background-color: $white;
         margin: 0 vw(29);
     }
     &__link{
-        
+
         font-size: vw(30);
         line-height: vw(33);
         text-align: center;
@@ -523,7 +523,7 @@ background-color: $white;
         height: vw(610);
     }
     &__img-right{
-      
+
         right: vw(101);
         width: vw(398);
         height: vw(699);
@@ -717,7 +717,7 @@ background-color: $white;
         margin-bottom: vw2(45);
     }
     &__slider{
-       
+
         position: relative;
         margin: vw(20) auto;
         max-width: vw(750);
@@ -811,11 +811,27 @@ background-color: $white;
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
     }
     &__slider{
+        opacity: 0;
         margin: 0 vw(47.5);
-        max-width: vw(205);
         width: 100%;
+        max-width: 0;
+        margin: 0;
+        transition-duration: .7s;
+        overflow: hidden;
+        &--active,  &--add{
+            opacity: 1;
+            margin: 0 vw(47.5);
+            max-width: vw(205);
+        }
+
+
+
+
         @include for-md(){
             max-width: vw2(159);
             margin: 0 vw2(5) vw2(5);
@@ -918,6 +934,13 @@ background-color: $white;
     overflow: hidden;
     display: none;
 }
+.party-personas__image-container--add{
+
+    transition-duration: .2s;
+    &:hover{
+        opacity: .7;
+    }
+}
 #label-for-pct{
     position: absolute;
     left: 0;
@@ -938,7 +961,7 @@ background-color: $white;
         font-weight: 700;
         text-align: center;
         text-transform: uppercase;
-       
+
         color: $darkgreen;
         margin-top: 0;
         }
@@ -1068,7 +1091,7 @@ background-color: $white;
             }
         }
         &-image{
-         
+
             max-width: 100%;
         }
         &-name{
@@ -1121,7 +1144,7 @@ background-color: $white;
             box-sizing: border-box;
             padding: 0 vw(14);
         }
-        
+
     }
     &__button{
         position: relative;
