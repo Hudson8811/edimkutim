@@ -1,17 +1,20 @@
 .collage-flex {
     display: flex;
+    align-items: flex-start;
     justify-content: space-between;
-    margin-left: 184px;
     margin-right: 60px;
+    margin-left: 184px;
 }
 
 .collage-info {
+    position: relative;
+    margin-top: 83px;
+    width: 830px;
+    padding: 52px 51px 52px 150px;
+    border-radius: 20px;
+    box-sizing: border-box;
     background: linear-gradient(0deg, #FFFFFF, #FFFFFF), url(12421412412.jpg);
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
-    border-radius: 20px;
-    position: relative;
-    padding: 52px 78px 52px 150px;
-    margin-top: 83px;
 
     &__logo {
         position: absolute;
@@ -22,43 +25,39 @@
     }
 
     &__type {
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 600;
-        font-size: 32px;
-        line-height: 39px;
-
         color: #2D3A67;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 32px;
+        font-weight: 600;
+        line-height: 39px;
     }
 
     &__title {
-        font-weight: bold;
-        font-size: 96px;
-        line-height: 96px;
-
-        color: #76BC21;
         margin-top: 2px;
+        color: #76BC21;
+        font-size: 95px;
+        font-weight: bold;
+        line-height: 1;
     }
 
     &__go {
-        font-weight: bold;
-        font-size: 30px;
-        line-height: 30px;
+        margin-top: 17px;
         letter-spacing: 0.04em;
         text-transform: uppercase;
         color: #27376B;
-        margin-top: 17px;
+        font-size: 30px;
+        font-weight: bold;
+        line-height: 30px;
     }
 
     img {}
-
-
 }
 
 .collage-info__go-link {
     display: block;
-    color: #f440bc;
-    text-decoration: underline;
     transition-duration: .2s;
+    text-decoration: underline;
+    color: #f440bc;
 
     &:hover {
         text-decoration: none;
@@ -78,24 +77,23 @@
 }
 
 .share-social {
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 59px;
     height: 59px;
-    display: block;
-    background: #27376B;
+    transition-duration: .4s;
     border-radius: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background: #27376B;
 
     img {
+        display: block;
         width: 30px;
         height: 30px;
         object-fit: contain;
         object-position: center center;
-        display: block;
     }
-
-    transition-duration: .4s;
 
     &:hover {
         background: #76AA4E;
@@ -118,69 +116,62 @@
 
 .collage-recipe-pics {
     position: relative;
-    height: 369px;
     width: 826px;
+    height: 369px;
 
     &__pic {
+        position: absolute;
         display: block;
+        height: auto;
         object-fit: contain;
         object-position: center center;
-        position: absolute;
-        height: auto;
 
         &--sauce {
+            top: 32px;
+            left: 65px;
             width: 87px;
             transform: rotate(-18.78deg);
-
-            left: 65px;
-            top: 32px;
         }
 
         &--pizza {
-            width: 369px;
             left: 178px;
+            width: 369px;
         }
 
         &--mayonnaise {
+            top: 67px;
+            right: 43px;
             width: 182px;
             transform: rotate(26.53deg);
-            right: 43px;
-            top: 67px;
         }
-
     }
-
-
-
 }
 
 .collage-recipe-info {
-    text-align: center;
-
-    margin-right: 88px;
     margin-top: 15px;
+    margin-right: 88px;
+    text-align: center;
 
     &__name {
         display: block;
-        font-weight: bold;
-        font-size: 30px;
-        line-height: 30px;
         text-align: center;
         text-transform: uppercase;
         color: #76BC21;
+        font-size: 30px;
+        font-weight: bold;
+        line-height: 30px;
     }
 
     &__view {
         display: block;
-        font-family: 'Montserrat', sans-serif;
         margin-top: 10px;
-        font-weight: bold;
-        font-size: 18px;
-        line-height: 22px;
         text-align: center;
-        text-decoration-line: underline;
-
         color: #27376B;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 18px;
+        font-weight: bold;
+        line-height: 22px;
+        text-decoration-line: underline;
 
         &:hover {}
 
@@ -190,32 +181,33 @@
     }
 }
 
-
 .wrapper {
-
     &--collage {
-        max-height: 100vh;
-        overflow: hidden;
         position: relative;
-
+        overflow: hidden;
+        max-height: 100vh;
+        transition-duration: .5s;
+        opacity: 0;
+        background-repeat: no-repeat, no-repeat;
         background-position: top center, center center;
         background-size: 100% auto, cover;
-        background-repeat: no-repeat, no-repeat;
+
+        &-visible {
+            opacity: 1;
+        }
 
         .collage-info {
-
             &::after {
-                content: '';
-                display: block;
                 position: absolute;
                 right: -60px;
                 bottom: -60px;
+                display: block;
                 width: 241px;
                 height: 194px;
-                background-size: contain;
-                background-position: center center;
+                content: '';
                 background-repeat: no-repeat;
-
+                background-position: center center;
+                background-size: contain;
             }
         }
 
@@ -224,9 +216,27 @@
 
             .collage-info {
                 &::after {
-                    background-image: url(../img/collage/Hawaii.png);
                     right: -81px;
                     bottom: -60px;
+                    background-image: url(../img/collage/Hawaii.png);
+                }
+
+                &__type {
+                    &::before {
+                        content: 'Гавайская вечеринка';
+                    }
+                }
+
+                &__title {
+                    &::before {
+                        content: 'Все будет “Aloha”! ';
+                    }
+                }
+
+                &__go-link-name {
+                    &::before {
+                        content: 'Гавайская вечеринка';
+                    }
                 }
             }
         }
@@ -236,9 +246,27 @@
 
             .collage-info {
                 &::after {
-                    background-image: url(../img/collage/Disco.png);
                     width: 238px;
                     height: 241px;
+                    background-image: url(../img/collage/Disco.png);
+                }
+
+                &__type {
+                    &::before {
+                        content: 'Вечеринка в стиле диско';
+                    }
+                }
+
+                &__title {
+                    &::before {
+                        content: 'Все будет “Top”!';
+                    }
+                }
+
+                &__go-link-name {
+                    &::before {
+                        content: 'Вечеринка в стиле диско';
+                    }
                 }
             }
         }
@@ -248,11 +276,29 @@
 
             .collage-info {
                 &::after {
-                    background-image: url(../img/collage/Gatsby.png);
-                    width: 132px;
-                    height: 177px;
                     right: -15px;
                     bottom: -30px;
+                    width: 132px;
+                    height: 177px;
+                    background-image: url(../img/collage/Gatsby.png);
+                }
+
+                &__type {
+                    &::before {
+                        content: 'Вечеринка в стиле Гэтсби';
+                    }
+                }
+
+                &__title {
+                    &::before {
+                        content: 'Все будет “OK”!';
+                    }
+                }
+
+                &__go-link-name {
+                    &::before {
+                        content: 'Вечеринка в стиле Гэтсби';
+                    }
                 }
             }
         }
@@ -262,11 +308,29 @@
 
             .collage-info {
                 &::after {
-                    background-image: url(../img/collage/Rock.png);
-                    width: 175px;
-                    height: 145px;
                     right: -36px;
                     bottom: -25px;
+                    width: 175px;
+                    height: 145px;
+                    background-image: url(../img/collage/Rock.png);
+                }
+
+                &__type {
+                    &::before {
+                        content: 'Рокерская вечеринка';
+                    }
+                }
+
+                &__title {
+                    &::before {
+                        content: 'Все будет “ROCK”!';
+                    }
+                }
+
+                &__go-link-name {
+                    &::before {
+                        content: 'Вечеринка в стиле рок';
+                    }
                 }
             }
         }
@@ -276,11 +340,29 @@
 
             .collage-info {
                 &::after {
-                    background-image: url(../img/collage/Asian.png);
-                    width: 202px;
-                    height: 157px;
                     right: -70px;
                     bottom: -38px;
+                    width: 202px;
+                    height: 157px;
+                    background-image: url(../img/collage/Asian.png);
+                }
+
+                &__type {
+                    &::before {
+                        content: 'Азиатская-вечеринка';
+                    }
+                }
+
+                &__title {
+                    &::before {
+                        content: 'Все будет “精細”!';
+                    }
+                }
+
+                &__go-link-name {
+                    &::before {
+                        content: 'Вечеринка в стиле азии';
+                    }
                 }
             }
         }
@@ -290,58 +372,129 @@
 
             .collage-info {
                 &::after {
+                    right: -39px;
+                    bottom: -9px;
+                    width: 165px;
+                    height: 154px;
                     background-image: url(../img/collage/Chelentano.png);
+                }
+
+                &__type {
+                    &::before {
+                        content: 'Строптивая Челентано-вечеринка';
+                    }
+                }
+
+                &__title {
+                    &::before {
+                        content: 'Все будет “Bueno”!';
+
+                    }
+                }
+
+                &__go-link-name {
+                    &::before {
+                        content: 'Вечеринка в стиле челентано';
+                    }
+                }
+            }
+        }
+
+        &-mexico {
+            background-image: url(../img/collage/topMexico.png), url(../img/collage/bgMexico.png);
+
+            .collage-info {
+                &::after {
+                    display: none;
+                    /* background-image: url(../img/collage/Mexico.png);
                     width: 165px;
                     height: 154px;
                     right: -39px;
-                    bottom: -9px;
+                    bottom: -9px;*/
+                }
+
+                &__type {
+                    &::before {
+                        content: 'Мексиканская вечеринка';
+                    }
+                }
+
+                &__title {
+                    &::before {
+                        content: 'Все будет “супер”!';
+                    }
+                }
+
+                &__go-link-name {
+                    &::before {
+                        content: 'Мексиканская вечеринка';
+                    }
                 }
             }
         }
     }
 }
 
-
 .collage-persons {
-    display: block;
     position: relative;
+    display: block;
     flex-grow: 1;
 
     .collage-person {
-        width: 279px;
-        display: block;
         position: absolute;
-        overflow: hidden;
         top: 0;
+        top: -47px;
+        display: block;
+        overflow: hidden;
+        width: 339px;
 
         &::before {
-            content: '';
             display: block;
             padding-top: 175%;
+            content: '';
         }
 
         &--1 {
-            width: 279px;
-            left: 654px;
+            //  width: 279px;
+            left: 621px;
         }
 
         &--2 {
-          //  width: 283px;
-            left: 927px;
+            // width: 283px;
+            left: 868px;
+        }
+
+        &--3 {
+            // width: 323px;
+            left: 1182px;
+        }
+
+        &--4 {
+            // width: 229px;
+            left: 456px;
+        }
+
+        &--5 {
+            // width: 335.22px;
+            left: 1417px;
+        }
+
+        &--6 {
+            //width: 280px;
+            left: 172px;
         }
 
         &__head {}
 
         &__anim {
-            border: none;
             position: absolute;
-            left: 0;
             top: 0;
+            left: 0;
             width: 100%;
             height: 100%;
+            border: none;
         }
     }
 }
-
 
 @import 'collage-adaptive';

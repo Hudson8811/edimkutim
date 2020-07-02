@@ -203,13 +203,36 @@ $(document).ready(function () {
         }
     });
 
+    if ($('.js-collage-page').length > 0) {
+        /*console.log(localStorage.getItem("party_settings"));
+            {"sauce":"sauce-2","mazik":"mazik-4","party_style":"gatsby","selectedPersonas":[["img/personas/1.png","m-1","мика"],["img/personas/1.png","m-1","миклухо"],["img/personas/1.png","m-1","Фёдор"],["img/personas/1.png","m-1","Иван"],["img/personas/2.png","w-1","Анька"],["img/personas/2.png","w-1","Алёна"]]}
+
+
+        */
+        var party_settings = JSON.parse(localStorage.getItem("party_settings"));
+        //console.log(party_settings);
+        if(party_settings){
+            $('.collage-recipe-pics__pic--sauce').attr('src', 'img/sau_and_maz/' + (party_settings['sauce']) + '.png');
+            $('.collage-recipe-pics__pic--mayonnaise').attr('src', 'img/sau_and_maz/' + (party_settings['mazik']) + '.png');
+
+
+
+        }
+
+        setTimeout(function () {
+            $('.wrapper--collage').addClass('wrapper--collage-visible');
+        }, 200);
+
+
+
+    }
 
 });
 
 function makeLocalStorage() {
-    var sauce=$('input[name="radio1"]:checked').val(),
-        mazik=$('input[name="radio2"]:checked').val();
-    var party_style=$('.party-style__slider .swiper-slide.swiper-slide-active .party-style__slide-name').attr('data-party-stile-id');
+    var sauce = $('input[name="radio1"]:checked').val(),
+        mazik = $('input[name="radio2"]:checked').val();
+    var party_style = $('.party-style__slider .swiper-slide.swiper-slide-active .party-style__slide-name').attr('data-party-stile-id');
 
 
     var selectedPersonas = [];
@@ -217,10 +240,10 @@ function makeLocalStorage() {
         selectedPersonas[index] = [];
         selectedPersonas[index][0] = $(this).attr('src');
         selectedPersonas[index][1] = $(this).attr('data-head-id');
-        selectedPersonas[index][3] = $(this).closest('.party-personas__slider').find('.party-personas__name').val();
+        selectedPersonas[index][2] = $(this).closest('.party-personas__slider').find('.party-personas__name').val();
     });
 
-    var party_settings={
+    var party_settings = {
         sauce: sauce,
         mazik: mazik,
         party_style: party_style,
@@ -228,10 +251,9 @@ function makeLocalStorage() {
     };
 
     localStorage.setItem('party_settings', JSON.stringify(party_settings));
+    document.location.href = "/collage.html";
     /*party_settings = JSON.parse(localStorage.getItem("party_settings"));
     console.log(party_settings);*/
-    /*
-    {"party_style":"Гавайская вечеринка","selectedPersonas":[["img/personas/1.png","m-1",null,""],["img/personas/1.png","m-1",null,""]]}
-    */
+
     return true;
 }

@@ -1,4 +1,4 @@
-@media screen and (max-width:1920px) and (min-width:950px) {
+@media all and (max-width:1920px) and (min-width:950px) {
     .collage-flex {
         margin-left: vw(184);
         margin-right: vw(60);
@@ -7,7 +7,8 @@
     .collage-info {
         box-shadow: vw(0) vw(4) vw(20) rgba(0, 0, 0, 0.1);
         border-radius: vw(20);
-        padding: vw(52) vw(78) vw(52) vw(150);
+        padding: vw(52) vw(51) vw(52) vw(150);
+        width: vw(830);
         margin-top: vw(83);
 
         &__logo {
@@ -23,8 +24,8 @@
         }
 
         &__title {
-            font-size: vw(96);
-            line-height: vw(96);
+            font-size: vw(95);
+            line-height: 1;
             margin-top: vw(2);
         }
 
