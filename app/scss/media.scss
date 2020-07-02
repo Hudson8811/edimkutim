@@ -1,3 +1,18 @@
+@media all and (max-width: 1335px) {
+    .party-personas__row{
+        margin-top: 12px;
+    }
+}
+@media all and (max-width: 1024px) {
+    .party-personas__slider{
+        max-height: 0;
+        height: auto;
+        width: 100%;
+    }
+    .party-personas__slider--active, .party-personas__slider--add{
+        max-height: 1000px;
+    }
+}
 @media all and (max-width: 1024px) {
     html{
     }

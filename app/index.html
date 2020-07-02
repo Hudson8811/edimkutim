@@ -86,7 +86,7 @@
                                         <span class="catalog__item-img-container">
                                             <img src="img/catalog-items/1.png" alt="" class="catalog__item-img">
                                         </span>
-                                        <input type="radio" name="radio1" id="radio1">
+                                        <input type="radio" name="radio1" id="radio1" value="sauce-1">
                                         <b class="catalog__item-check">
                                         </b>
                                     </label>
@@ -94,7 +94,7 @@
                                         <span class="catalog__item-img-container">
                                             <img src="img/catalog-items/2.png" alt="" class="catalog__item-img">
                                         </span>
-                                        <input type="radio" name="radio1" id="radio2">
+                                        <input type="radio" name="radio1" id="radio2" value="sauce-2">
                                         <b class="catalog__item-check">
                                         </b>
                                     </label>
@@ -102,7 +102,7 @@
                                         <span class="catalog__item-img-container">
                                             <img src="img/catalog-items/3.png" alt="" class="catalog__item-img">
                                         </span>
-                                        <input type="radio" name="radio1" id="radio3">
+                                        <input type="radio" name="radio1" id="radio3" value="sauce-3">
                                         <b class="catalog__item-check">
                                         </b>
                                     </label>
@@ -112,7 +112,7 @@
                                         <span class="catalog__item-img-container">
                                             <img src="img/catalog-items/4.png" alt="" class="catalog__item-img">
                                         </span>
-                                        <input type="radio" name="radio2" id="radio4">
+                                        <input type="radio" name="radio2" id="radio4" value="mazik-1">
                                         <b class="catalog__item-check">
                                         </b>
                                     </label>
@@ -120,7 +120,7 @@
                                         <span class="catalog__item-img-container">
                                             <img src="img/catalog-items/5.png" alt="" class="catalog__item-img">
                                         </span>
-                                        <input type="radio" name="radio2" id="radio5">
+                                        <input type="radio" name="radio2" id="radio5" value="mazik-2">
                                         <b class="catalog__item-check">
                                         </b>
                                     </label>
@@ -129,7 +129,7 @@
                                         <span class="catalog__item-img-container">
                                             <img src="img/catalog-items/7.png" alt="" class="catalog__item-img">
                                         </span>
-                                        <input type="radio" name="radio2" id="radio7">
+                                        <input type="radio" name="radio2" id="radio7" value="mazik-3">
                                         <b class="catalog__item-check">
                                         </b>
                                     </label>
@@ -137,7 +137,7 @@
                                         <span class="catalog__item-img-container">
                                             <img src="img/catalog-items/8.png" alt="" class="catalog__item-img">
                                         </span>
-                                        <input type="radio" name="radio2" id="radio8">
+                                        <input type="radio" name="radio2" id="radio8" value="mazik-4">
                                         <b class="catalog__item-check">
                                         </b>
                                     </label>
@@ -145,7 +145,7 @@
                                         <span class="catalog__item-img-container">
                                             <img src="img/catalog-items/6.png" alt="" class="catalog__item-img">
                                         </span>
-                                        <input type="radio" name="radio2" id="radio6">
+                                        <input type="radio" name="radio2" id="radio6" value="mazik-5">
                                         <b class="catalog__item-check">
                                         </b>
                                     </label>
@@ -153,7 +153,7 @@
                                         <span class="catalog__item-img-container">
                                             <img src="img/catalog-items/9.png" alt="" class="catalog__item-img">
                                         </span>
-                                        <input type="radio" name="radio2" id="radio9">
+                                        <input type="radio" name="radio2" id="radio9" value="mazik-6">
                                         <b class="catalog__item-check">
                                         </b>
                                     </label>
@@ -163,7 +163,8 @@
                     </div>
                     <input type="button" name="back" value="Back" onclick="msf_btn_back()">
                     <div class="button-decor">
-                        <input type="button" name="next" value="Готово! ЧТо дальше?" onclick="msf_btn_next()">
+                        <input type="button" class="first-step-next-btn first-step-next-btn--disabled" name="next"
+                            value="Готово! ЧТо дальше?" onclick="msf_btn_next()">
                     </div>
                     <div class="msf_hide">
                         <div class="msf_bullet_o"></div>
@@ -187,7 +188,7 @@
                                             <div class="party-style__image-container">
                                                 <img src="img/party-sliders/1.png" alt="" class="party-style__image">
                                             </div>
-                                            <div class="party-style__slide-name">
+                                            <div class="party-style__slide-name" data-party-stile-id="hawaii">
                                                 <span>Гавайская вечеринка</span>
                                             </div>
                                         </div>
@@ -195,8 +196,40 @@
                                             <div class="party-style__image-container">
                                                 <img src="img/party-sliders/1.png" alt="" class="party-style__image">
                                             </div>
-                                            <div class="party-style__slide-name">
-                                                <span>Гавайская вечеринка</span>
+                                            <div class="party-style__slide-name" data-party-stile-id="disco">
+                                                <span>Вечеринка в стиле диско  </span>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="party-style__image-container">
+                                                <img src="img/party-sliders/1.png" alt="" class="party-style__image">
+                                            </div>
+                                            <div class="party-style__slide-name" data-party-stile-id="gatsby">
+                                                <span>Вечеринка в стиле Гэтсби  </span>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="party-style__image-container">
+                                                <img src="img/party-sliders/1.png" alt="" class="party-style__image">
+                                            </div>
+                                            <div class="party-style__slide-name" data-party-stile-id="rock">
+                                                <span>Рокерская вечеринка</span>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="party-style__image-container">
+                                                <img src="img/party-sliders/1.png" alt="" class="party-style__image">
+                                            </div>
+                                            <div class="party-style__slide-name" data-party-stile-id="asian">
+                                                <span>Азиатская-вечеринка</span>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="party-style__image-container">
+                                                <img src="img/party-sliders/1.png" alt="" class="party-style__image">
+                                            </div>
+                                            <div class="party-style__slide-name" data-party-stile-id="chelentano">
+                                                <span>Строптивая Челентано-вечеринка</span>
                                             </div>
                                         </div>
                                     </div>
@@ -245,14 +278,16 @@
                                         <div class="swiper-wrapper">
                                             <div class="swiper-slide">
                                                 <div class="party-personas__image-container">
-                                                    <img src="img/personas/1.png" alt="" class="party-personas__image">
+                                                    <img src="img/personas/1.png" alt="" class="party-personas__image"
+                                                        data-head-id="m-1">
                                                 </div>
 
 
                                             </div>
                                             <div class="swiper-slide">
                                                 <div class="party-personas__image-container">
-                                                    <img src="img/personas/2.png" alt="" class="party-personas__image">
+                                                    <img src="img/personas/2.png" alt="" class="party-personas__image"
+                                                        data-head-id="w-1">
                                                 </div>
 
 
@@ -263,21 +298,23 @@
                                         <div class="swiper-button swiper-button-next"></div>
                                         <div class="swiper-button swiper-button-prev"></div>
                                     </div>
-                                    <input type="text" class="party-personas__name" value="Женя-экстремал">
+                                    <input type="text" class="party-personas__name" placeholder="Введите имя">
                                 </div>
                                 <div class="party-personas__slider party-personas__slider--active">
                                     <div class="swiper-container">
                                         <div class="swiper-wrapper">
                                             <div class="swiper-slide">
                                                 <div class="party-personas__image-container">
-                                                    <img src="img/personas/1.png" alt="" class="party-personas__image">
+                                                    <img src="img/personas/1.png" alt="" class="party-personas__image"
+                                                        data-head-id="m-1">
                                                 </div>
 
 
                                             </div>
                                             <div class="swiper-slide">
                                                 <div class="party-personas__image-container">
-                                                    <img src="img/personas/2.png" alt="" class="party-personas__image">
+                                                    <img src="img/personas/2.png" alt="" class="party-personas__image"
+                                                        data-head-id="w-1">
                                                 </div>
 
 
@@ -288,21 +325,23 @@
                                         <div class="swiper-button swiper-button-next"></div>
                                         <div class="swiper-button swiper-button-prev"></div>
                                     </div>
-                                    <input type="text" class="party-personas__name" value="Викуля">
+                                    <input type="text" class="party-personas__name" placeholder="Введите имя">
                                 </div>
                                 <div class="party-personas__slider ">
                                     <div class="swiper-container">
                                         <div class="swiper-wrapper">
                                             <div class="swiper-slide">
                                                 <div class="party-personas__image-container">
-                                                    <img src="img/personas/1.png" alt="" class="party-personas__image">
+                                                    <img src="img/personas/1.png" alt="" class="party-personas__image"
+                                                        data-head-id="m-1">
                                                 </div>
 
 
                                             </div>
                                             <div class="swiper-slide">
                                                 <div class="party-personas__image-container">
-                                                    <img src="img/personas/2.png" alt="" class="party-personas__image">
+                                                    <img src="img/personas/2.png" alt="" class="party-personas__image"
+                                                        data-head-id="w-1">
                                                 </div>
 
 
@@ -313,21 +352,23 @@
                                         <div class="swiper-button swiper-button-next"></div>
                                         <div class="swiper-button swiper-button-prev"></div>
                                     </div>
-                                    <input type="text" class="party-personas__name" value="Викуля">
+                                    <input type="text" class="party-personas__name" placeholder="Введите имя">
                                 </div>
                                 <div class="party-personas__slider ">
                                     <div class="swiper-container">
                                         <div class="swiper-wrapper">
                                             <div class="swiper-slide">
                                                 <div class="party-personas__image-container">
-                                                    <img src="img/personas/1.png" alt="" class="party-personas__image">
+                                                    <img src="img/personas/1.png" alt="" class="party-personas__image"
+                                                        data-head-id="m-1">
                                                 </div>
 
 
                                             </div>
                                             <div class="swiper-slide">
                                                 <div class="party-personas__image-container">
-                                                    <img src="img/personas/2.png" alt="" class="party-personas__image">
+                                                    <img src="img/personas/2.png" alt="" class="party-personas__image"
+                                                        data-head-id="w-1">
                                                 </div>
 
 
@@ -338,21 +379,23 @@
                                         <div class="swiper-button swiper-button-next"></div>
                                         <div class="swiper-button swiper-button-prev"></div>
                                     </div>
-                                    <input type="text" class="party-personas__name" value="Викуля">
+                                    <input type="text" class="party-personas__name" placeholder="Введите имя">
                                 </div>
                                 <div class="party-personas__slider ">
                                     <div class="swiper-container">
                                         <div class="swiper-wrapper">
                                             <div class="swiper-slide">
                                                 <div class="party-personas__image-container">
-                                                    <img src="img/personas/1.png" alt="" class="party-personas__image">
+                                                    <img src="img/personas/1.png" alt="" class="party-personas__image"
+                                                        data-head-id="m-1">
                                                 </div>
 
 
                                             </div>
                                             <div class="swiper-slide">
                                                 <div class="party-personas__image-container">
-                                                    <img src="img/personas/2.png" alt="" class="party-personas__image">
+                                                    <img src="img/personas/2.png" alt="" class="party-personas__image"
+                                                        data-head-id="w-1">
                                                 </div>
 
 
@@ -363,21 +406,23 @@
                                         <div class="swiper-button swiper-button-next"></div>
                                         <div class="swiper-button swiper-button-prev"></div>
                                     </div>
-                                    <input type="text" class="party-personas__name" value="Викуля">
+                                    <input type="text" class="party-personas__name" placeholder="Введите имя">
                                 </div>
                                 <div class="party-personas__slider ">
                                     <div class="swiper-container">
                                         <div class="swiper-wrapper">
                                             <div class="swiper-slide">
                                                 <div class="party-personas__image-container">
-                                                    <img src="img/personas/1.png" alt="" class="party-personas__image">
+                                                    <img src="img/personas/1.png" alt="" class="party-personas__image"
+                                                        data-head-id="m-1">
                                                 </div>
 
 
                                             </div>
                                             <div class="swiper-slide">
                                                 <div class="party-personas__image-container">
-                                                    <img src="img/personas/2.png" alt="" class="party-personas__image">
+                                                    <img src="img/personas/2.png" alt="" class="party-personas__image"
+                                                        data-head-id="w-1">
                                                 </div>
 
 
@@ -388,13 +433,14 @@
                                         <div class="swiper-button swiper-button-next"></div>
                                         <div class="swiper-button swiper-button-prev"></div>
                                     </div>
-                                    <input type="text" class="party-personas__name" value="Викуля">
+                                    <input type="text" class="party-personas__name" placeholder="Введите имя">
                                 </div>
                                 <div class="party-personas__slider party-personas__slider--add">
 
                                     <div class="party-personas__custom">
 
-                                        <div class="party-personas__image-container party-personas__image-container--add">
+                                        <div
+                                            class="party-personas__image-container party-personas__image-container--add">
                                             <label id="label-for-pct">
 
                                             </label>
@@ -404,7 +450,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <input type="button" name="back" value="Back" onclick="msf_btn_back()">
+                            <input type="button" name="back" class="js-button-personas-selected" value="Back"
+                                onclick="msf_btn_back()">
 
 
                             <div class="button-container">
@@ -806,14 +853,31 @@
                 if (msf_input_s.getAttribute("type") === "button") {
                     // nothing happens
                 } else {
-                    if (msf_input_s.value === "") {
-                        msf_input_s.style.backgroundColor = "pink";
-                        msf_val = false;
-                    } else {
-                        if (msf_val === false) {} else {
-                            msf_val = true;
-                            msf_input_s.style.backgroundColor = "lime";
+                    if ($(msf_input_s).hasClass('party-personas__name')) {
+                        if ($(msf_input_s).closest('.party-personas__slider').hasClass(
+                            'party-personas__slider--active')) {
+                            if (msf_input_s.value === "") {
+                                msf_input_s.style.backgroundColor = "pink";
+                                msf_val = false;
+                            } else {
+                                if (msf_val === false) {} else {
+                                    msf_val = true;
+                                    msf_input_s.style.backgroundColor = "lime";
+                                }
+                            }
+
                         }
+                    } else {
+                        if (msf_input_s.value === "") {
+                            msf_input_s.style.backgroundColor = "pink";
+                            msf_val = false;
+                        } else {
+                            if (msf_val === false) {} else {
+                                msf_val = true;
+                                msf_input_s.style.backgroundColor = "lime";
+                            }
+                        }
+
                     }
                 };
             };

@@ -26,9 +26,9 @@ var party_style = new Swiper('.prizes__single-slider .swiper-container', {
     },
 });
 
-var personas__slider=[];
+var personas__slider = [];
 
-$('.party-personas__slider .swiper-container').each(function ( index, value) {
+$('.party-personas__slider .swiper-container').each(function (index, value) {
     personas__slider[index] = new Swiper(value, {
 
         navigation: {
@@ -43,8 +43,8 @@ $('.party-personas__slider .swiper-container').each(function ( index, value) {
 $('.party-personas__image-container--add').click(function () {
     if ($('.party-personas__slider--active').length < 6) {
         var index = $('.party-personas__slider:not(.party-personas__slider--active):not(.party-personas__slider--add):first')
-        .addClass('party-personas__slider--active')
-        .index();
+            .addClass('party-personas__slider--active')
+            .index();
         setTimeout(function () {
             personas__slider[index].update();
             //personas__slider.destroy(false);
@@ -194,4 +194,44 @@ $(document).ready(function () {
     });
 
 
+
+
+
+    $('input[name="radio1"], input[name="radio2"]').change(function () {
+        if ($('input[name="radio1"]:checked').length == 1 && $('input[name="radio2"]:checked').length == 1) {
+            $('.first-step-next-btn--disabled').removeClass('first-step-next-btn--disabled');
+        }
+    });
+
+
 });
+
+function makeLocalStorage() {
+    var sauce=$('input[name="radio1"]:checked').val(),
+        mazik=$('input[name="radio2"]:checked').val();
+    var party_style=$('.party-style__slider .swiper-slide.swiper-slide-active .party-style__slide-name').attr('data-party-stile-id');
+
+
+    var selectedPersonas = [];
+    $('.party-personas__slider.party-personas__slider--active .swiper-slide.swiper-slide-active img').each(function (index, element) {
+        selectedPersonas[index] = [];
+        selectedPersonas[index][0] = $(this).attr('src');
+        selectedPersonas[index][1] = $(this).attr('data-head-id');
+        selectedPersonas[index][3] = $(this).closest('.party-personas__slider').find('.party-personas__name').val();
+    });
+
+    var party_settings={
+        sauce: sauce,
+        mazik: mazik,
+        party_style: party_style,
+        selectedPersonas: selectedPersonas
+    };
+
+    localStorage.setItem('party_settings', JSON.stringify(party_settings));
+    /*party_settings = JSON.parse(localStorage.getItem("party_settings"));
+    console.log(party_settings);*/
+    /*
+    {"party_style":"Гавайская вечеринка","selectedPersonas":[["img/personas/1.png","m-1",null,""],["img/personas/1.png","m-1",null,""]]}
+    */
+    return true;
+}

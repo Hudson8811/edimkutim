@@ -43,6 +43,10 @@ gulp.task('html', function(){
   return gulp.src('app/*.html')
   .pipe(browserSync.reload({stream: true}))
 });
+gulp.task('anim', function(){
+  return gulp.src('app/animations/*.html')
+  .pipe(browserSync.reload({stream: true}))
+});
 
 gulp.task('script', function(){
   return gulp.src('app/js/*.js')
@@ -82,15 +86,15 @@ gulp.task('browser-sync', function() {
 //       spacing: { // Add padding
 //         padding: 0
 //       },
-      
-      
+
+
 //     },
 //     mode: {
-     
+
 //       symbol: true // Activate the «symbol» mode
 //     }
 //   };
- 
+
 // gulp.src('**/*.svg', { cwd: 'app/images' })
 //   .pipe(plumber())
 //   .pipe(svg(config))
@@ -104,22 +108,26 @@ gulp.task('export', function(){
   let buildHtml = gulp.src('app/**/*.html')
     .pipe(gulp.dest('dist'));
 
+  let buildAnim = gulp.src('app/animations/**/*.html')
+    .pipe(gulp.dest('dist/animations'));
+
   let BuildCss = gulp.src('app/css/**/*.css')
     .pipe(gulp.dest('dist/css'));
 
   let BuildJs = gulp.src('app/js/**/*.js')
     .pipe(gulp.dest('dist/js'));
-    
+
   let BuildFonts = gulp.src('app/fonts/**/*.*')
     .pipe(gulp.dest('dist/fonts'));
 
   let BuildImg = gulp.src('app/images/**/*.*')
-    .pipe(gulp.dest('dist/images'));   
+    .pipe(gulp.dest('dist/images'));
 });
 
 gulp.task('watch', function(){
   gulp.watch('app/scss/**/*.scss', gulp.parallel('scss'));
   gulp.watch('app/*.html', gulp.parallel('html'))
+  gulp.watch('app/animations/**/*.html', gulp.parallel('anim'))
   gulp.watch('app/js/*.js', gulp.parallel('script'))
 });
 

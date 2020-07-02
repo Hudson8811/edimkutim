@@ -811,7 +811,7 @@ background-color: $white;
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
-        width: 60%;
+        width: 68%;
         margin-left: auto;
         margin-right: auto;
     }
@@ -823,10 +823,12 @@ background-color: $white;
         margin: 0;
         transition-duration: .7s;
         overflow: hidden;
+        margin-bottom: 15px;
         &--active,  &--add{
             opacity: 1;
             margin: 0 vw(47.5);
             max-width: vw(205);
+            margin-bottom: 15px;
         }
 
 
@@ -1610,6 +1612,11 @@ background-color: $white;
     &.slick-next{
         right: vw2(-5);
     }
+}
+
+.first-step-next-btn--disabled{
+    opacity: 0;
+    pointer-events: none;
 }
 
 @import "collage";
