@@ -2,18 +2,18 @@
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    margin-right: 60px;
-    margin-left: 184px;
+    margin-right: vw(60);
+    margin-left: vw(184);
     position: relative;
     z-index: 3;
 }
 
 .collage-info {
     position: relative;
-    margin-top: 83px;
-    width: 830px;
-    padding: 52px 51px 52px 150px;
-    border-radius: 20px;
+    margin-top: vw(83);
+    width: vw(830);
+    padding: vw(52) vw(51) vw(52) vw(150);
+    border-radius: vw(20);
     box-sizing: border-box;
     background: linear-gradient(0deg, #FFFFFF, #FFFFFF), url(12421412412.jpg);
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
@@ -186,8 +186,9 @@
 .wrapper {
     &--collage {
         position: relative;
-        overflow: hidden;
-        max-height: 100vh;
+
+        height: auto;
+        min-height: 100%;
         transition-duration: .5s;
         opacity: 0;
         background-repeat: no-repeat, no-repeat;
@@ -444,16 +445,17 @@
 .collage-persons {
     position: relative;
     z-index: 1;
-    display: block;
+    display: flex;
     flex-grow: 1;
+    justify-content: center;
 
     .collage-person {
-        position: absolute;
+        position: relative;
         top: 0;
         top: -47px;
         display: block;
         overflow: hidden;
-        width: 339px;
+        width: 16.666%;
 
         &::before {
             display: block;
@@ -463,35 +465,63 @@
 
         &--1 {
             //  width: 279px;
-            left: 621px;
+            //left: 621px;
         }
 
         &--2 {
             // width: 283px;
-            left: 868px;
+            //left: 868px;
         }
 
         &--3 {
             // width: 323px;
-            left: 1182px;
+            //left: 1182px;
         }
 
         &--4 {
             // width: 229px;
-            left: 456px;
+            //left: 456px;
         }
 
         &--5 {
             // width: 335.22px;
-            left: 1417px;
+            //left: 1417px;
         }
 
         &--6 {
             //width: 280px;
-            left: 172px;
+            //left: 172px;
         }
 
-        &__head {}
+        &__head {
+            position: absolute;
+            z-index: 1;
+            &--1{
+                width: vw(72);
+                left: vw(141);
+                top: vw(39);
+            }
+            &--2{
+                width: vw(74);
+                left: vw(157);
+                top: vw(111);
+            }
+        }
+
+        &__name {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            font-weight: bold;
+            font-size: vw(24);
+            line-height: vw(24);
+            text-align: center;
+            text-transform: uppercase;
+            text-align: center;
+            max-width: vw(160);
+            z-index: 2;
+        }
+
 
         &__anim {
             position: absolute;
@@ -500,6 +530,23 @@
             width: 100%;
             height: 100%;
             border: none;
+        }
+
+        &.type{
+            &-m{
+                .collage-person__name{
+                    color: #161940;
+                    top: vw(214);
+                    margin-left: vw(10);
+                }
+
+            }
+            &-w{
+                .collage-person__name{
+                    color: #ffffff;
+                    top: vw(305);
+                }
+            }
         }
     }
 }

@@ -234,6 +234,23 @@ $(document).ready(function () {
 		$('.collage-info__go-link').attr('href', party_box_link[party_style]);
 
 
+		var htmlPersonal = '',
+			ip = 0;
+		party_settings['selectedPersonas'].forEach((element) => {
+			ip++;
+			console.log(element);
+			var head = element[0],
+				headNum = (head.split('/')[2]).split('.')[0],
+				body = element[1],
+				name = element[2];
+			htmlPersonal += '<div class="collage-person collage-person--'+ip+' type-'+body.split('-')[0]+'">\n' +
+				'<img src="img/personas/head-'+headNum+'.png" alt="" class="collage-person__head collage-person__head--'+headNum+'">\n' +
+				'<div class="collage-person__name">'+name+'</div>\n' +
+				'<iframe class="collage-person__anim" src="animations/'+body+'.html" frameborder="0"></iframe>\n' +
+				'</div>'
+		});
+
+		$('.collage-persons').html(htmlPersonal);
 
 
 		setTimeout(function () {
