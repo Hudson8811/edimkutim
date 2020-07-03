@@ -267,7 +267,7 @@ function makeLocalStorageAndGo() {
 	};
 
 	localStorage.setItem('party_settings', JSON.stringify(party_settings));
-	document.location.href = "/collage.html";
+	document.location.href = location.href.substring(0, location.href.lastIndexOf("/")+1)+"/collage.html";
 	/*party_settings = JSON.parse(localStorage.getItem("party_settings"));
 	console.log(party_settings);*/
 
