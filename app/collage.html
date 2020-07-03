@@ -9,14 +9,18 @@
 </head>
 
 <body>
-    <!--
-        wrapper--collage-hawaii
-        wrapper--collage-disco
-        wrapper--collage-gatsby
-        wrapper--collage-rock
-        wrapper--collage-asian
-        wrapper--collage-chelentano
-    -->
+
+    <script>
+        var party_styles = {
+			'hawaii': 'wrapper--collage-hawaii',
+			'disco': 'wrapper--collage-disco',
+			'gatsby': 'wrapper--collage-gatsby',
+			'rock': 'wrapper--collage-rock',
+			'asian': 'wrapper--collage-asian',
+			'chelentano': 'wrapper--collage-chelentano',
+			'mexico': 'wrapper--collage-mexico'
+		};
+    </script>
     <div class="wrapper js-collage-page wrapper--collage wrapper--collage-hawaii">
         <header class="header">
             <div class="container header__container">
@@ -52,8 +56,21 @@
                     </div>
                     <div class="collage-info__type"> </div>
                     <div class="collage-info__title"> </div>
+
+                    <script>
+                        var party_box_link  = {
+                            'hawaii': '/pb-link1.html',
+                            'disco': '/pb-link2.html',
+                            'gatsby': '/pb-link3.html',
+                            'rock': '/pb-link4.html',
+                            'asian': '/pb-link5.html',
+                            'chelentano': '/pb-link6.html',
+                            'mexico': '/pb-link7.html'
+                        };
+                    </script>
                     <div class="collage-info__go">авторизуйтесь и поделитесь, чтобы выиграть <a href=""
-                            class="collage-info__go-link">party-box “<span class="collage-info__go-link-name"></span>“</a>
+                            class="collage-info__go-link">party-box “<span
+                                class="collage-info__go-link-name"></span>“</a>
                     </div>
                     <div class="share-socials collage-info__socials">
                         <a href="" class="share-social"><img src="img/collage/vk.svg" alt=""></a>
@@ -67,16 +84,46 @@
 
                         <img src="img/collage/p2.png" class="collage-recipe-pics__pic collage-recipe-pics__pic--sauce"
                             alt="">
-
-                        <img src="img/collage/p1.png" class="collage-recipe-pics__pic collage-recipe-pics__pic--pizza"
-                            alt="">
+                        <script>
+                            var party_recipe  = {
+                                'hawaii': 'recipe-hawaii.png',
+                                'disco': 'recipe-disco.png',
+                                'gatsby': 'recipe-gatsby.png',
+                                'rock': 'recipe-rock.png',
+                                'asian': 'recipe-asian.png',
+                                'chelentano': 'recipe-chelentano.png',
+                                'mexico': 'recipe-mexico.png'
+                            };
+                        </script>
+                        <img src="img/recipes/" class="collage-recipe-pics__pic collage-recipe-pics__pic--pizza" >
 
                         <img src="img/collage/p3.png"
                             class="collage-recipe-pics__pic collage-recipe-pics__pic--mayonnaise" alt="">
 
                     </div>
                     <div class="collage-recipe-info">
-                        <div class="collage-recipe-info__name">пицца с ананасами</div>
+
+                        <script>
+                            var party_recipe_name  = {
+                                'hawaii': 'Запеченные утиные ножки с папайей, черносливом и орехами',
+                                'disco': 'Брускетта с карамелизованным яблоком',
+                                'gatsby': 'Курица à La King в сливочном соусе с овощной пастой',
+                                'rock': 'Бургер с говядиной',
+                                'asian': 'Бургер с говядиной',
+                                'chelentano': 'Паста с лососем, томатами и хрустящими баклажанами',
+                                'mexico': 'Кесадилья с говядиной и овощами'
+                            };
+                            var party_recipe_link  = {
+                                'hawaii': '/recipe1.html',
+                                'disco': '/recipe2.html',
+                                'gatsby': '/recipe3.html',
+                                'rock': '/recipe4.html',
+                                'asian': '/recipe5.html',
+                                'chelentano': '/recipe5.html',
+                                'mexico': '/recipe6.html'
+                            };
+                        </script>
+                        <div class="collage-recipe-info__name"></div>
                         <a href="" class="collage-recipe-info__view">посмотреть рецепт</a>
                     </div>
                 </div>

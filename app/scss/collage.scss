@@ -4,6 +4,8 @@
     justify-content: space-between;
     margin-right: 60px;
     margin-left: 184px;
+    position: relative;
+    z-index: 3;
 }
 
 .collage-info {
@@ -304,7 +306,11 @@
         }
 
         &-rock {
-            background-image: url(../img/collage/topRock.png), url(../img/collage/bgRock.png);
+            background-image: /*url(../img/collage/topRock.png),*/ url(../img/collage/bgRock.png);
+
+            background-position: center center;
+            background-size: cover;
+            background-repeat: no-repeat;
 
             .collage-info {
                 &::after {
@@ -437,6 +443,7 @@
 
 .collage-persons {
     position: relative;
+    z-index: 1;
     display: block;
     flex-grow: 1;
 

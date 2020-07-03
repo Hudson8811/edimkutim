@@ -242,6 +242,7 @@
     .collage-recipe {
         margin-left: 0;
         margin-top: 0;
+        width: 100%;
     }
 
     .collage-recipe-pics {
@@ -297,6 +298,7 @@
     .collage-info {
         padding: vw9(13) vw9(40) vw9(15) vw9(60);
         margin-top: vw9(15);
+        width: 100%;
     }
 
     .collage-info__logo {
@@ -388,6 +390,10 @@
 
             &-chelentano {
                 background-image: url(../img/collage/bgChelentano.png);
+
+            }
+            &-mexico {
+                background-image: url(../img/collage/bgMexico.png);
 
             }
         }
