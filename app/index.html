@@ -254,7 +254,7 @@
 
 
                     <div class="button-container">
-                        <input type="button" name="next" value="продолжить" onclick="msf_btn_next()">
+                        <input type="button" name="next" value="продолжить" onclick="msf_btn_next('go_to_step_3')">
                     </div>
 
                     <div class="msf_hide">
@@ -283,24 +283,7 @@
                             <div class="party-personas__row">
                                 <div class="party-personas__slider party-personas__slider--active">
                                     <div class="swiper-container">
-                                        <div class="swiper-wrapper">
-                                            <div class="swiper-slide">
-                                                <div class="party-personas__image-container">
-                                                    <img src="img/personas/1.png" alt="" class="party-personas__image"
-                                                        data-head-id="m-1">
-                                                </div>
-
-
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <div class="party-personas__image-container">
-                                                    <img src="img/personas/2.png" alt="" class="party-personas__image"
-                                                        data-head-id="w-1">
-                                                </div>
-
-
-                                            </div>
-
+                                        <div class="swiper-wrapper js-insert-heads">
                                         </div>
                                         <!-- Add Arrows -->
                                         <div class="swiper-button swiper-button-next"></div>
@@ -310,23 +293,8 @@
                                 </div>
                                 <div class="party-personas__slider party-personas__slider--active">
                                     <div class="swiper-container">
-                                        <div class="swiper-wrapper">
-                                            <div class="swiper-slide">
-                                                <div class="party-personas__image-container">
-                                                    <img src="img/personas/1.png" alt="" class="party-personas__image"
-                                                        data-head-id="m-1">
-                                                </div>
+                                        <div class="swiper-wrapper js-insert-heads">
 
-
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <div class="party-personas__image-container">
-                                                    <img src="img/personas/2.png" alt="" class="party-personas__image"
-                                                        data-head-id="w-1">
-                                                </div>
-
-
-                                            </div>
 
                                         </div>
                                         <!-- Add Arrows -->
@@ -337,23 +305,7 @@
                                 </div>
                                 <div class="party-personas__slider ">
                                     <div class="swiper-container">
-                                        <div class="swiper-wrapper">
-                                            <div class="swiper-slide">
-                                                <div class="party-personas__image-container">
-                                                    <img src="img/personas/1.png" alt="" class="party-personas__image"
-                                                        data-head-id="m-1">
-                                                </div>
-
-
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <div class="party-personas__image-container">
-                                                    <img src="img/personas/2.png" alt="" class="party-personas__image"
-                                                        data-head-id="w-1">
-                                                </div>
-
-
-                                            </div>
+                                        <div class="swiper-wrapper js-insert-heads">
 
                                         </div>
                                         <!-- Add Arrows -->
@@ -364,23 +316,7 @@
                                 </div>
                                 <div class="party-personas__slider ">
                                     <div class="swiper-container">
-                                        <div class="swiper-wrapper">
-                                            <div class="swiper-slide">
-                                                <div class="party-personas__image-container">
-                                                    <img src="img/personas/1.png" alt="" class="party-personas__image"
-                                                        data-head-id="m-1">
-                                                </div>
-
-
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <div class="party-personas__image-container">
-                                                    <img src="img/personas/2.png" alt="" class="party-personas__image"
-                                                        data-head-id="w-1">
-                                                </div>
-
-
-                                            </div>
+                                        <div class="swiper-wrapper js-insert-heads">
 
                                         </div>
                                         <!-- Add Arrows -->
@@ -391,23 +327,7 @@
                                 </div>
                                 <div class="party-personas__slider ">
                                     <div class="swiper-container">
-                                        <div class="swiper-wrapper">
-                                            <div class="swiper-slide">
-                                                <div class="party-personas__image-container">
-                                                    <img src="img/personas/1.png" alt="" class="party-personas__image"
-                                                        data-head-id="m-1">
-                                                </div>
-
-
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <div class="party-personas__image-container">
-                                                    <img src="img/personas/2.png" alt="" class="party-personas__image"
-                                                        data-head-id="w-1">
-                                                </div>
-
-
-                                            </div>
+                                        <div class="swiper-wrapper js-insert-heads">
 
                                         </div>
                                         <!-- Add Arrows -->
@@ -418,23 +338,7 @@
                                 </div>
                                 <div class="party-personas__slider ">
                                     <div class="swiper-container">
-                                        <div class="swiper-wrapper">
-                                            <div class="swiper-slide">
-                                                <div class="party-personas__image-container">
-                                                    <img src="img/personas/1.png" alt="" class="party-personas__image"
-                                                        data-head-id="m-1">
-                                                </div>
-
-
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <div class="party-personas__image-container">
-                                                    <img src="img/personas/2.png" alt="" class="party-personas__image"
-                                                        data-head-id="w-1">
-                                                </div>
-
-
-                                            </div>
+                                        <div class="swiper-wrapper js-insert-heads">
 
                                         </div>
                                         <!-- Add Arrows -->
@@ -891,6 +795,10 @@
                 };
             };
             if (msf_val === true) {
+                if (msf_btn_next_type == 'go_to_step_3') {
+                    paste_personas_pics();
+                    init_personas_slider();
+                }
                 if (msf_btn_next_type !== 'next-go-collage-page') {
                     // goes to the next step
                     var selection = msf_getFsTag[msf_form_nr];
@@ -904,6 +812,7 @@
                 } else {
                     makeLocalStorageAndGo();
                 }
+
             }
         };
 
