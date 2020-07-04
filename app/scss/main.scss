@@ -350,12 +350,40 @@ footer {
 }
 
 .steps {
+    overflow: hidden;
     margin-top: vw(-46);
     min-height: 100%;
     padding-bottom: vw(30);
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    &.steps--prizes-true {
+        justify-content: flex-start;
+    }
+
+    @media screen and(min-width:1025px) and (max-height: 650px) {
+        &.steps--hp {
+            padding-bottom: 0;
+
+            .catalog__item-img-container {
+                height: 8.9375vw;
+            }
+
+            .fieldset input[name="next"] {
+                margin: 1.16667vw auto 0;
+            }
+
+            &>.fieldset:first-child input[name="next"] {
+                margin-top: 1.08333vw;
+            }
+
+            .steps__title {
+                margin-bottom: 0;
+            }
+        }
+    }
 
     @include for-md() {
         margin-top: 0;
@@ -1014,6 +1042,7 @@ footer {
 
         .swiper-slide {
             padding: vw(60) 0;
+            padding: 2.125vw 0;
 
             @include for-md() {
                 padding: vw2(24) 0;
@@ -1023,8 +1052,11 @@ footer {
 
     &__image-container {
         position: relative;
-        height: vw(157);
-        width: vw(157);
+        /*height: vw(157);
+        width: vw(157);*/
+
+        height: 5.17708vw;
+        width: 5.17708vw;
         background: #F3F3F3;
         border-radius: 50%;
         margin: 0 auto;
@@ -1132,18 +1164,25 @@ footer {
 
         color: $darkgreen;
         margin-top: 0;
-    }
 
-    &--big {
-        font-size: vw(74.5);
-        line-height: vw(91);
-        margin-bottom: vw(15);
+        &--big {
+            font-size: vw(74.5);
+            line-height: vw(91);
+            margin-bottom: vw(15);
 
-        @include for-md() {
-            font-size: vw2(30);
-            line-height: vw2(30);
-            margin-bottom: vw2(25);
+            &.prizes__title--true {
+                font-size: vw(74);
+
+            }
+
+            @include for-md() {
+                font-size: vw2(30);
+                line-height: vw2(30);
+                margin-bottom: vw2(25);
+            }
         }
+
+
     }
 
     &--lit {
@@ -1370,6 +1409,14 @@ footer {
         color: $white;
         letter-spacing: 0.04em;
         transition: .3s;
+
+        @media screen and (min-width:1025px) {
+            position: absolute;
+            z-index: 1;
+            bottom: vw(152);
+            left: 50%;
+            transform: translateX(-50%);
+        }
 
         @include for-md() {
             min-width: vw2(344);
@@ -1925,12 +1972,15 @@ footer {
         width: vw2(40);
         height: vw2(50);
     }
-    .recept-prev{
-left: vw2(-52);
+
+    .recept-prev {
+        left: vw2(-52);
     }
-    .recept-next{
-right: vw2(-52);
+
+    .recept-next {
+        right: vw2(-52);
     }
+
     .recepts__title-mob {
         width: 100%;
         display: flex;
