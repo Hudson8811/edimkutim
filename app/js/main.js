@@ -15,7 +15,7 @@ var party_style = new Swiper('.party-style .swiper-container', {
 	},
 });
 
-var party_style = new Swiper('.prizes__single-slider .swiper-container', {
+var prizes_single_slider = new Swiper('.prizes__single-slider .swiper-container', {
 	// pagination: {
 	//     el: '.swiper-pagination',
 	//     type: 'fraction',
@@ -27,7 +27,8 @@ var party_style = new Swiper('.prizes__single-slider .swiper-container', {
 });
 
 var personas__slider = [];
-function init_personas_slider(){
+
+function init_personas_slider() {
 	$('.party-personas__slider .swiper-container').each(function (index, value) {
 		personas__slider[index] = new Swiper(value, {
 
@@ -40,15 +41,16 @@ function init_personas_slider(){
 		});
 	});
 }
-function paste_personas_pics(){
-	var party_style=$('.party-style__slider .swiper-slide.swiper-slide-active .party-style__slide-name').attr('data-party-stile-id');
 
-	for(i=0;i<personas__slider.length;i++){
+function paste_personas_pics() {
+	var party_style = $('.party-style__slider .swiper-slide.swiper-slide-active .party-style__slide-name').attr('data-party-stile-id');
+
+	for (i = 0; i < personas__slider.length; i++) {
 		personas__slider[i].destroy();
 	}
-	var appendString="";
-	for(i=1;i<=14;i++){
-		appendString+='<div class="swiper-slide"><div class="party-personas__image-container"><img src="img/s3_heads/'+party_style+'/Head'+i+'.png" alt="" class="party-personas__image" data-head-id="head-'+i+'"></div></div>';
+	var appendString = "";
+	for (i = 1; i <= 14; i++) {
+		appendString += '<div class="swiper-slide"><div class="party-personas__image-container"><img src="img/s3_heads/' + party_style + '/Head' + i + '.png" alt="" class="party-personas__image" data-head-id="head-' + i + '"></div></div>';
 	}
 	$('.js-insert-heads').append(appendString);
 }
@@ -83,6 +85,32 @@ var party_style = new Swiper('.prizes__three-slider .swiper-container', {
 	}
 });
 
+/*
+if ($('.js-products-page-slider').length > 0) {
+
+	console.log(hash);
+	setTimeout(function(){
+		prizes_three_slider.slideTo(parseInt(hash));
+	},500);
+}
+*/
+var hash = window.location.hash.slice(1);
+
+var prizes_three_slider = new Swiper('.prizes__three-slider .swiper-container', {
+	slidesPerView: 2,
+	initialSlide: parseInt(hash)?parseInt(hash)-1:0,
+	centeredSlides: true,
+
+	navigation: {
+		nextEl: '.swiper-button-next',
+		prevEl: '.swiper-button-prev',
+	},
+	breakpoints: {
+		1024: {
+			slidesPerView: 3,
+		},
+	}
+});
 
 //   $('.prizes__single-slider .swiper-container').each(function(){
 //     var prizes__single_slider = new Swiper(this, {
@@ -115,7 +143,7 @@ var wow = new WOW({
 new WOW().init();
 
 
-var receptsSlider = new Swiper('.recepts__slider .swiper-container', {
+var receptsSlider = new Swiper('.js-recepts__slider .swiper-container', {
 	slidesPerView: 1,
 	effect: 'fade',
 	loop: true,
@@ -128,7 +156,7 @@ var receptsSlider = new Swiper('.recepts__slider .swiper-container', {
 
 jQuery(document).ready(function () {
 	jQuery('.scrollbar-macosx').scrollbar();
-	$('#recepts').addClass('hide');
+	//$('#recepts').addClass('hide');
 });
 
 $('.recepts__close').click(function () {
@@ -256,10 +284,10 @@ $(document).ready(function () {
 				headNum = (head.split('/')[2]).split('.')[0],
 				body = element[1],
 				name = element[2];
-			htmlPersonal += '<div class="collage-person collage-person--'+ip+' type-'+body.split('-')[0]+'">\n' +
-				'<img src="img/personas/head-'+headNum+'.png" alt="" class="collage-person__head collage-person__head--'+headNum+'">\n' +
-				'<div class="collage-person__name">'+name+'</div>\n' +
-				'<iframe class="collage-person__anim" src="animations/'+body+'.html" frameborder="0"></iframe>\n' +
+			htmlPersonal += '<div class="collage-person collage-person--' + ip + ' type-' + body.split('-')[0] + '">\n' +
+				'<img src="img/personas/head-' + headNum + '.png" alt="" class="collage-person__head collage-person__head--' + headNum + '">\n' +
+				'<div class="collage-person__name">' + name + '</div>\n' +
+				'<iframe class="collage-person__anim" src="animations/' + body + '.html" frameborder="0"></iframe>\n' +
 				'</div>'
 		});
 
@@ -297,11 +325,9 @@ function makeLocalStorageAndGo() {
 	};
 
 	localStorage.setItem('party_settings', JSON.stringify(party_settings));
-	document.location.href = location.href.substring(0, location.href.lastIndexOf("/")+1)+"/collage.html";
+	document.location.href = location.href.substring(0, location.href.lastIndexOf("/") + 1) + "/collage.html";
 	/*party_settings = JSON.parse(localStorage.getItem("party_settings"));
 	console.log(party_settings);*/
 
 	return true;
 }
-
-

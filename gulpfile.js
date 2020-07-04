@@ -108,8 +108,9 @@ gulp.task('export', function(){
   let buildHtml = gulp.src('app/**/*.html')
     .pipe(gulp.dest('dist'));
 
-  let buildAnim = gulp.src('app/animations/**/*.html')
+    let buildAnim = gulp.src('app/animations/**/*.html')
     .pipe(gulp.dest('dist/animations'));
+
 
   let BuildCss = gulp.src('app/css/**/*.css')
     .pipe(gulp.dest('dist/css'));
@@ -126,7 +127,7 @@ gulp.task('export', function(){
 
 gulp.task('watch', function(){
   gulp.watch('app/scss/**/*.scss', gulp.parallel('scss'));
-  gulp.watch('app/*.html', gulp.parallel('html'))
+  gulp.watch('app/**/*.html', gulp.parallel('html'))
   gulp.watch('app/animations/**/*.html', gulp.parallel('anim'))
   gulp.watch('app/js/*.js', gulp.parallel('script'))
 });
