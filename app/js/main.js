@@ -155,7 +155,7 @@ var receptsSlider = new Swiper('.js-recepts__slider .swiper-container', {
 });
 
 jQuery(document).ready(function () {
-	jQuery('.scrollbar-macosx').scrollbar();
+	jQuery('.scrollbar-macosx:not(.recepts__left):not(.recepts__right)').scrollbar();
 	//$('#recepts').addClass('hide');
 });
 
