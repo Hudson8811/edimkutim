@@ -15,11 +15,14 @@ var party_style = new Swiper('.party-style .swiper-container', {
 	},
 });
 
+var hash = window.location.hash.slice(1);
+
 var prizes_single_slider = new Swiper('.prizes__single-slider .swiper-container', {
 	// pagination: {
 	//     el: '.swiper-pagination',
 	//     type: 'fraction',
 	//   },
+	initialSlide: parseInt(hash)?parseInt(hash)-1:0,
 	navigation: {
 		nextEl: '.swiper-button-next',
 		prevEl: '.swiper-button-prev',
