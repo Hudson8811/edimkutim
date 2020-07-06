@@ -167,6 +167,17 @@ $('.recepts__close').click(function () {
 	$('#recepts').addClass('hide');
 });
 
+$('.party-style__slide-name > span').hover(function () {
+	$(this).parent().prev().addClass("js-active");
+	$(".swiper-button").addClass("js-hidden")
+});
+
+$('.party-style__text-content').mouseleave(function () {
+	$(this).removeClass("js-active");
+	$(".swiper-button").removeClass("js-hidden")
+});
+
+
 $('.js-show-recepts').click(function () {
 	event.preventDefault();
 	$('#recepts').removeClass('hide');
