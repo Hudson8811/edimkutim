@@ -146,9 +146,12 @@ var wow = new WOW({
 new WOW().init();
 
 
+var hash = window.location.hash.slice(1);
+
 var receptsSlider = new Swiper('.js-recepts__slider .swiper-container', {
 	slidesPerView: 1,
 	effect: 'fade',
+	initialSlide: parseInt(hash)?parseInt(hash)-1:0,
 	loop: true,
 	simulateTouch: false,
 	navigation: {

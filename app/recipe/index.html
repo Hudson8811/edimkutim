@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/main.min.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <img class="header__decor-left wow fadeInLeft" src="../img/header/decor-left.png" alt="" data-wow-duration="0.7s">
+            <div class="container header__container">
+                <div class="header__row">
+                    <nav class="menu header__menu">
+                        <ul class="menu__list">
+                            <li class="menu__list-item"><a href="#" class="menu__link">продукция</a></li>
+                            <li class="menu__list-item"><a href="#" class="menu__link menu__link--active">#едимкутим</a></li>
+                            <li class="menu__list-item"><a href="#" class="menu__link">призы</a></li>
+                            <li class="menu__list-item"><a href="#" class="menu__link  js-show-recepts">рецепты для вечеринок</a></li>
+                            <li class="menu__list-item"><a href="#" class="menu__link">условия акции</a></li>
+                        </ul>
+                    </nav>
+
+                </div>
+            </div>
+            <div class="header__logo">
+                <span class="header__logo-img"></span>
+            </div>
+            <img class="header__decor-right wow fadeInRight" src="../img/header/decor-right.png" alt="" data-wow-duration="0.7s">
+        </header>
+        <main class="main">
+
+            <div id="recepts" class="recepts">
+                <!--<button class="recepts__close">
+                    <svg width="26" height="27" viewBox="0 0 26 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2.00024 2.72119L24 24.7211" stroke="#323232" stroke-width="5"/>
+                        <path d="M24 2.72119L2.0001 24.721" stroke="#323232" stroke-width="5"/>
+                    </svg>
+                </button>-->
+                <div class="js-recepts__slider recepts__slider" >
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="recepts__slide swiper-slide">
+                                <div class="recepts__title">
+                                    <div class="recept-prev recept-button"></div>
+                                    <span>пицца с ананасами</span>
+                                    <div class="recept-next recept-button"></div>
+                                </div>
+                                <div class="recepts__flex">
+                                    <div class="recepts__left scrollbar-macosx">
+                                        <div class="recepts__col">
+                                            <div class="recepts__ind">
+                                                <div class="recepts__ind-img">
+                                                    <img src="../img/recept/ind-main.svg" alt="">
+                                                </div>
+                                                <div class="recepts__ind-title">салатная заправка <span class="recepts__ind-title-product-name">«Французские пряности и чеснок»</span>
+                                                    </div>
+                                                <div class="recepts__ind-text">6 ст.л.</div>
+                                            </div>
+                                            <div class="recepts__ind">
+                                                <div class="recepts__ind-img">
+                                                    <img src="../img/recept/ind-1.svg" alt="">
+                                                </div>
+                                                <div class="recepts__ind-title">лайм</div>
+                                                <div class="recepts__ind-text">2 шт.</div>
+                                            </div>
+                                            <div class="recepts__ind">
+                                                <div class="recepts__ind-img">
+                                                    <img src="../img/recept/ind-2.svg" alt="">
+                                                </div>
+                                                <div class="recepts__ind-title">лук красный</div>
+                                                <div class="recepts__ind-text">1 шт.</div>
+                                            </div>
+                                            <div class="recepts__ind">
+                                                <div class="recepts__ind-img">
+                                                    <img src="../img/recept/ind-3.svg" alt="">
+                                                </div>
+                                                <div class="recepts__ind-title">Кинза</div>
+                                                <div class="recepts__ind-text">4 веточки</div>
+                                            </div>
+
+                                            <div class="recepts__ind">
+                                                <div class="recepts__ind-img">
+                                                    <img src="../img/recept/ind-4.svg" alt="">
+                                                </div>
+                                                <div class="recepts__ind-title">Креветки</div>
+                                                <div class="recepts__ind-text">12 шт.</div>
+                                            </div>
+                                            <div class="recepts__ind">
+                                                <div class="recepts__ind-img">
+                                                    <img src="../img/recept/ind-5.svg" alt="">
+                                                </div>
+                                                <div class="recepts__ind-title">Тортилья</div>
+                                                <div class="recepts__ind-text">4 шт.</div>
+                                            </div>
+                                            <div class="recepts__ind">
+                                                <div class="recepts__ind-img">
+                                                    <img src="../img/recept/ind-6.svg" alt="">
+                                                </div>
+                                                <div class="recepts__ind-title">Микрозелень</div>
+                                                <div class="recepts__ind-text">по вкусу</div>
+                                            </div>
+                                            <div class="recepts__ind">
+                                                <div class="recepts__ind-img">
+                                                    <img src="../img/recept/ind-7.svg" alt="">
+                                                </div>
+                                                <div class="recepts__ind-title">соль</div>
+                                                <div class="recepts__ind-text">по вкусу</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="recepts__title-mob">
+                                        <span>пицца с ананасами</span>
+                                    </div>
+                                    <div class="recepts__center">
+                                            <a href="/link_for_prev_recipe ссылки дублируются для адаптива, нужно заменить и вдругом месте. ищи по англ надписи в ссылке" class="recept-prev recept-button recept-button-mob"></a>
+                                        <div class="recepts__img">
+
+                                            <img src="../img/recept/pizza.jpg" alt="">
+                                        </div>
+                                            <a href="/link_for_prev_recipe ссылки дублируются для адаптива, нужно заменить и вдругом месте. ищи по англ надписи в ссылке" class="recept-next recept-button recept-button-mob"></a>
+                                    </div>
+                                    <div class="recepts__right scrollbar-macosx">
+                                        <div class="recepts__step">
+                                            <div class="recepts__step-title">Шаг 1</div>
+                                            <div class="recepts__step-text">Снимите цедру и выжмите сок из одного лайма, а второй нарежьте дольками. Лук очистите и нарежьте тонкими полукольцами. Кинзу измельчите.</div>
+                                        </div>
+                                        <div class="recepts__step">
+                                            <div class="recepts__step-title">Шаг 2</div>
+                                            <div class="recepts__step-text">Выложите в сотейник креветки и цедру лайма, посолите и прогревайте 1–2 минуты. Затем жарьте 4 минуты креветки, полив сковороду заправкой «Французские пряности и чеснок».</div>
+                                        </div>
+                                        <div class="recepts__step">
+                                            <div class="recepts__step-title">Шаг 3</div>
+                                            <div class="recepts__step-text">Обжаривайте тортильи на сухой сковороде по 1 минуте с каждой стороны. Выложите лепешки на тарелки, посыпьте красным луком, сбрызните соком лайма и салатной заправкой «Французские пряности и чеснок».</div>
+                                        </div>
+                                        <div class="recepts__step">
+                                            <div class="recepts__step-title">Шаг 4</div>
+                                            <div class="recepts__step-text">Сверху на каждую лепешку положите по три креветки и измельченную кинзу. Сложите лепешки пополам подавайте с дольками лайма, украсив микрозеленью.</div>
+                                        </div>
+                                        <div class="recepts-info">* на 6 персон</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="recepts__slide swiper-slide">
+                                <div class="recepts__title">
+                                    <div class="recept-prev recept-button"></div>
+                                    <span>пицца не с ананасами</span>
+                                    <div class="recept-next recept-button"></div>
+                                </div>
+                                <div class="recepts__flex">
+                                    <div class="recepts__left scrollbar-macosx">
+                                        <div class="recepts__col">
+                                            <div class="recepts__ind">
+                                                <div class="recepts__ind-img">
+                                                    <img src="../img/recept/ind-main.svg" alt="">
+                                                </div>
+                                                <div class="recepts__ind-title">салатная заправка <span class="recepts__ind-title-product-name">«Французские пряности и чеснок»</span>
+                                                    </div>
+                                                <div class="recepts__ind-text">6 ст.л.</div>
+                                            </div>
+                                            <div class="recepts__ind">
+                                                <div class="recepts__ind-img">
+                                                    <img src="../img/recept/ind-1.svg" alt="">
+                                                </div>
+                                                <div class="recepts__ind-title">лайм</div>
+                                                <div class="recepts__ind-text">2 шт.</div>
+                                            </div>
+                                            <div class="recepts__ind">
+                                                <div class="recepts__ind-img">
+                                                    <img src="../img/recept/ind-2.svg" alt="">
+                                                </div>
+                                                <div class="recepts__ind-title">лук красный</div>
+                                                <div class="recepts__ind-text">1 шт.</div>
+                                            </div>
+                                            <div class="recepts__ind">
+                                                <div class="recepts__ind-img">
+                                                    <img src="../img/recept/ind-3.svg" alt="">
+                                                </div>
+                                                <div class="recepts__ind-title">Кинза</div>
+                                                <div class="recepts__ind-text">4 веточки</div>
+                                            </div>
+
+                                            <div class="recepts__ind">
+                                                <div class="recepts__ind-img">
+                                                    <img src="../img/recept/ind-4.svg" alt="">
+                                                </div>
+                                                <div class="recepts__ind-title">Креветки</div>
+                                                <div class="recepts__ind-text">12 шт.</div>
+                                            </div>
+                                            <div class="recepts__ind">
+                                                <div class="recepts__ind-img">
+                                                    <img src="../img/recept/ind-5.svg" alt="">
+                                                </div>
+                                                <div class="recepts__ind-title">Тортилья</div>
+                                                <div class="recepts__ind-text">4 шт.</div>
+                                            </div>
+                                            <div class="recepts__ind">
+                                                <div class="recepts__ind-img">
+                                                    <img src="../img/recept/ind-6.svg" alt="">
+                                                </div>
+                                                <div class="recepts__ind-title">Микрозелень</div>
+                                                <div class="recepts__ind-text">по вкусу</div>
+                                            </div>
+                                            <div class="recepts__ind">
+                                                <div class="recepts__ind-img">
+                                                    <img src="../img/recept/ind-7.svg" alt="">
+                                                </div>
+                                                <div class="recepts__ind-title">соль</div>
+                                                <div class="recepts__ind-text">по вкусу</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="recepts__title-mob">
+                                        <span>пицца не с ананасами</span>
+                                    </div>
+                                    <div class="recepts__center">
+                                            <a href="/link_for_prev_recipe ссылки дублируются для адаптива, нужно заменить и вдругом месте. ищи по англ надписи в ссылке" class="recept-prev recept-button recept-button-mob"></a>
+                                        <div class="recepts__img">
+
+                                            <img src="../img/recept/pizza.jpg" alt="">
+                                        </div>
+                                            <a href="/link_for_prev_recipe ссылки дублируются для адаптива, нужно заменить и вдругом месте. ищи по англ надписи в ссылке" class="recept-next recept-button recept-button-mob"></a>
+                                    </div>
+                                    <div class="recepts__right scrollbar-macosx">
+                                        <div class="recepts__step">
+                                            <div class="recepts__step-title">Шаг 1</div>
+                                            <div class="recepts__step-text">Снимите цедру и выжмите сок из одного лайма, а второй нарежьте дольками. Лук очистите и нарежьте тонкими полукольцами. Кинзу измельчите.</div>
+                                        </div>
+                                        <div class="recepts__step">
+                                            <div class="recepts__step-title">Шаг 2</div>
+                                            <div class="recepts__step-text">Выложите в сотейник креветки и цедру лайма, посолите и прогревайте 1–2 минуты. Затем жарьте 4 минуты креветки, полив сковороду заправкой «Французские пряности и чеснок».</div>
+                                        </div>
+                                        <div class="recepts__step">
+                                            <div class="recepts__step-title">Шаг 3</div>
+                                            <div class="recepts__step-text">Обжаривайте тортильи на сухой сковороде по 1 минуте с каждой стороны. Выложите лепешки на тарелки, посыпьте красным луком, сбрызните соком лайма и салатной заправкой «Французские пряности и чеснок».</div>
+                                        </div>
+                                        <div class="recepts__step">
+                                            <div class="recepts__step-title">Шаг 4</div>
+                                            <div class="recepts__step-text">Сверху на каждую лепешку положите по три креветки и измельченную кинзу. Сложите лепешки пополам подавайте с дольками лайма, украсив микрозеленью.</div>
+                                        </div>
+                                        <div class="recepts-info">* на 6 персон</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="recepts__slide swiper-slide">
+                                <div class="recepts__title">
+                                    <div class="recept-prev recept-button"></div>
+                                    <span>не пицца с ананасами</span>
+                                    <div class="recept-next recept-button"></div>
+                                </div>
+                                <div class="recepts__flex">
+                                    <div class="recepts__left scrollbar-macosx">
+                                        <div class="recepts__col">
+                                            <div class="recepts__ind">
+                                                <div class="recepts__ind-img">
+                                                    <img src="../img/recept/ind-main.svg" alt="">
+                                                </div>
+                                                <div class="recepts__ind-title">салатная заправка <span class="recepts__ind-title-product-name">«Французские пряности и чеснок»</span>
+                                                    </div>
+                                                <div class="recepts__ind-text">6 ст.л.</div>
+                                            </div>
+                                            <div class="recepts__ind">
+                                                <div class="recepts__ind-img">
+                                                    <img src="../img/recept/ind-1.svg" alt="">
+                                                </div>
+                                                <div class="recepts__ind-title">лайм</div>
+                                                <div class="recepts__ind-text">2 шт.</div>
+                                            </div>
+                                            <div class="recepts__ind">
+                                                <div class="recepts__ind-img">
+                                                    <img src="../img/recept/ind-2.svg" alt="">
+                                                </div>
+                                                <div class="recepts__ind-title">лук красный</div>
+                                                <div class="recepts__ind-text">1 шт.</div>
+                                            </div>
+                                            <div class="recepts__ind">
+                                                <div class="recepts__ind-img">
+                                                    <img src="../img/recept/ind-3.svg" alt="">
+                                                </div>
+                                                <div class="recepts__ind-title">Кинза</div>
+                                                <div class="recepts__ind-text">4 веточки</div>
+                                            </div>
+
+                                            <div class="recepts__ind">
+                                                <div class="recepts__ind-img">
+                                                    <img src="../img/recept/ind-4.svg" alt="">
+                                                </div>
+                                                <div class="recepts__ind-title">Креветки</div>
+                                                <div class="recepts__ind-text">12 шт.</div>
+                                            </div>
+                                            <div class="recepts__ind">
+                                                <div class="recepts__ind-img">
+                                                    <img src="../img/recept/ind-5.svg" alt="">
+                                                </div>
+                                                <div class="recepts__ind-title">Тортилья</div>
+                                                <div class="recepts__ind-text">4 шт.</div>
+                                            </div>
+                                            <div class="recepts__ind">
+                                                <div class="recepts__ind-img">
+                                                    <img src="../img/recept/ind-6.svg" alt="">
+                                                </div>
+                                                <div class="recepts__ind-title">Микрозелень</div>
+                                                <div class="recepts__ind-text">по вкусу</div>
+                                            </div>
+                                            <div class="recepts__ind">
+                                                <div class="recepts__ind-img">
+                                                    <img src="../img/recept/ind-7.svg" alt="">
+                                                </div>
+                                                <div class="recepts__ind-title">соль</div>
+                                                <div class="recepts__ind-text">по вкусу</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="recepts__title-mob">
+                                        <span>не пицца с ананасами</span>
+                                    </div>
+                                    <div class="recepts__center">
+                                            <a href="/link_for_prev_recipe ссылки дублируются для адаптива, нужно заменить и вдругом месте. ищи по англ надписи в ссылке" class="recept-prev recept-button recept-button-mob"></a>
+                                        <div class="recepts__img">
+
+                                            <img src="../img/recept/pizza.jpg" alt="">
+                                        </div>
+                                            <a href="/link_for_prev_recipe ссылки дублируются для адаптива, нужно заменить и вдругом месте. ищи по англ надписи в ссылке" class="recept-next recept-button recept-button-mob"></a>
+                                    </div>
+                                    <div class="recepts__right scrollbar-macosx">
+                                        <div class="recepts__step">
+                                            <div class="recepts__step-title">Шаг 1</div>
+                                            <div class="recepts__step-text">Снимите цедру и выжмите сок из одного лайма, а второй нарежьте дольками. Лук очистите и нарежьте тонкими полукольцами. Кинзу измельчите.</div>
+                                        </div>
+                                        <div class="recepts__step">
+                                            <div class="recepts__step-title">Шаг 2</div>
+                                            <div class="recepts__step-text">Выложите в сотейник креветки и цедру лайма, посолите и прогревайте 1–2 минуты. Затем жарьте 4 минуты креветки, полив сковороду заправкой «Французские пряности и чеснок».</div>
+                                        </div>
+                                        <div class="recepts__step">
+                                            <div class="recepts__step-title">Шаг 3</div>
+                                            <div class="recepts__step-text">Обжаривайте тортильи на сухой сковороде по 1 минуте с каждой стороны. Выложите лепешки на тарелки, посыпьте красным луком, сбрызните соком лайма и салатной заправкой «Французские пряности и чеснок».</div>
+                                        </div>
+                                        <div class="recepts__step">
+                                            <div class="recepts__step-title">Шаг 4</div>
+                                            <div class="recepts__step-text">Сверху на каждую лепешку положите по три креветки и измельченную кинзу. Сложите лепешки пополам подавайте с дольками лайма, украсив микрозеленью.</div>
+                                        </div>
+                                        <div class="recepts-info">* на 6 персон</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="recepts__slide swiper-slide">
+                                <div class="recepts__title">
+                                    <div class="recept-prev recept-button"></div>
+                                    <span>пицца с не ананасами</span>
+                                    <div class="recept-next recept-button"></div>
+                                </div>
+                                <div class="recepts__flex">
+                                    <div class="recepts__left scrollbar-macosx">
+                                        <div class="recepts__col">
+                                            <div class="recepts__ind">
+                                                <div class="recepts__ind-img">
+                                                    <img src="../img/recept/ind-main.svg" alt="">
+                                                </div>
+                                                <div class="recepts__ind-title">салатная заправка <span class="recepts__ind-title-product-name">«Французские пряности и чеснок»</span>
+                                                    </div>
+                                                <div class="recepts__ind-text">6 ст.л.</div>
+                                            </div>
+                                            <div class="recepts__ind">
+                                                <div class="recepts__ind-img">
+                                                    <img src="../img/recept/ind-1.svg" alt="">
+                                                </div>
+                                                <div class="recepts__ind-title">лайм</div>
+                                                <div class="recepts__ind-text">2 шт.</div>
+                                            </div>
+                                            <div class="recepts__ind">
+                                                <div class="recepts__ind-img">
+                                                    <img src="../img/recept/ind-2.svg" alt="">
+                                                </div>
+                                                <div class="recepts__ind-title">лук красный</div>
+                                                <div class="recepts__ind-text">1 шт.</div>
+                                            </div>
+                                            <div class="recepts__ind">
+                                                <div class="recepts__ind-img">
+                                                    <img src="../img/recept/ind-3.svg" alt="">
+                                                </div>
+                                                <div class="recepts__ind-title">Кинза</div>
+                                                <div class="recepts__ind-text">4 веточки</div>
+                                            </div>
+
+                                            <div class="recepts__ind">
+                                                <div class="recepts__ind-img">
+                                                    <img src="../img/recept/ind-4.svg" alt="">
+                                                </div>
+                                                <div class="recepts__ind-title">Креветки</div>
+                                                <div class="recepts__ind-text">12 шт.</div>
+                                            </div>
+                                            <div class="recepts__ind">
+                                                <div class="recepts__ind-img">
+                                                    <img src="../img/recept/ind-5.svg" alt="">
+                                                </div>
+                                                <div class="recepts__ind-title">Тортилья</div>
+                                                <div class="recepts__ind-text">4 шт.</div>
+                                            </div>
+                                            <div class="recepts__ind">
+                                                <div class="recepts__ind-img">
+                                                    <img src="../img/recept/ind-6.svg" alt="">
+                                                </div>
+                                                <div class="recepts__ind-title">Микрозелень</div>
+                                                <div class="recepts__ind-text">по вкусу</div>
+                                            </div>
+                                            <div class="recepts__ind">
+                                                <div class="recepts__ind-img">
+                                                    <img src="../img/recept/ind-7.svg" alt="">
+                                                </div>
+                                                <div class="recepts__ind-title">соль</div>
+                                                <div class="recepts__ind-text">по вкусу</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="recepts__title-mob">
+                                        <span>пицца с не ананасами</span>
+                                    </div>
+                                    <div class="recepts__center">
+                                            <a href="/link_for_prev_recipe ссылки дублируются для адаптива, нужно заменить и вдругом месте. ищи по англ надписи в ссылке" class="recept-prev recept-button recept-button-mob"></a>
+                                        <div class="recepts__img">
+
+                                            <img src="../img/recept/pizza.jpg" alt="">
+                                        </div>
+                                            <a href="/link_for_prev_recipe ссылки дублируются для адаптива, нужно заменить и вдругом месте. ищи по англ надписи в ссылке" class="recept-next recept-button recept-button-mob"></a>
+                                    </div>
+                                    <div class="recepts__right scrollbar-macosx">
+                                        <div class="recepts__step">
+                                            <div class="recepts__step-title">Шаг 1</div>
+                                            <div class="recepts__step-text">Снимите цедру и выжмите сок из одного лайма, а второй нарежьте дольками. Лук очистите и нарежьте тонкими полукольцами. Кинзу измельчите.</div>
+                                        </div>
+                                        <div class="recepts__step">
+                                            <div class="recepts__step-title">Шаг 2</div>
+                                            <div class="recepts__step-text">Выложите в сотейник креветки и цедру лайма, посолите и прогревайте 1–2 минуты. Затем жарьте 4 минуты креветки, полив сковороду заправкой «Французские пряности и чеснок».</div>
+                                        </div>
+                                        <div class="recepts__step">
+                                            <div class="recepts__step-title">Шаг 3</div>
+                                            <div class="recepts__step-text">Обжаривайте тортильи на сухой сковороде по 1 минуте с каждой стороны. Выложите лепешки на тарелки, посыпьте красным луком, сбрызните соком лайма и салатной заправкой «Французские пряности и чеснок».</div>
+                                        </div>
+                                        <div class="recepts__step">
+                                            <div class="recepts__step-title">Шаг 4</div>
+                                            <div class="recepts__step-text">Сверху на каждую лепешку положите по три креветки и измельченную кинзу. Сложите лепешки пополам подавайте с дольками лайма, украсив микрозеленью.</div>
+                                        </div>
+                                        <div class="recepts-info">* на 6 персон</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="recepts__slide swiper-slide">
+                                <div class="recepts__title">
+                                    <div class="recept-prev recept-button"></div>
+                                    <span>пицца с ананасами</span>
+                                    <div class="recept-next recept-button"></div>
+                                </div>
+                                <div class="recepts__flex">
+                                    <div class="recepts__left scrollbar-macosx">
+                                        <div class="recepts__col">
+                                            <div class="recepts__ind">
+                                                <div class="recepts__ind-img">
+                                                    <img src="../img/recept/ind-main.svg" alt="">
+                                                </div>
+                                                <div class="recepts__ind-title">салатная заправка <span class="recepts__ind-title-product-name">«Французские пряности и чеснок»</span>
+                                                    </div>
+                                                <div class="recepts__ind-text">6 ст.л.</div>
+                                            </div>
+                                            <div class="recepts__ind">
+                                                <div class="recepts__ind-img">
+                                                    <img src="../img/recept/ind-1.svg" alt="">
+                                                </div>
+                                                <div class="recepts__ind-title">лайм</div>
+                                                <div class="recepts__ind-text">2 шт.</div>
+                                            </div>
+                                            <div class="recepts__ind">
+                                                <div class="recepts__ind-img">
+                                                    <img src="../img/recept/ind-2.svg" alt="">
+                                                </div>
+                                                <div class="recepts__ind-title">лук красный</div>
+                                                <div class="recepts__ind-text">1 шт.</div>
+                                            </div>
+                                            <div class="recepts__ind">
+                                                <div class="recepts__ind-img">
+                                                    <img src="../img/recept/ind-3.svg" alt="">
+                                                </div>
+                                                <div class="recepts__ind-title">Кинза</div>
+                                                <div class="recepts__ind-text">4 веточки</div>
+                                            </div>
+
+                                            <div class="recepts__ind">
+                                                <div class="recepts__ind-img">
+                                                    <img src="../img/recept/ind-4.svg" alt="">
+                                                </div>
+                                                <div class="recepts__ind-title">Креветки</div>
+                                                <div class="recepts__ind-text">12 шт.</div>
+                                            </div>
+                                            <div class="recepts__ind">
+                                                <div class="recepts__ind-img">
+                                                    <img src="../img/recept/ind-5.svg" alt="">
+                                                </div>
+                                                <div class="recepts__ind-title">Тортилья</div>
+                                                <div class="recepts__ind-text">4 шт.</div>
+                                            </div>
+                                            <div class="recepts__ind">
+                                                <div class="recepts__ind-img">
+                                                    <img src="../img/recept/ind-6.svg" alt="">
+                                                </div>
+                                                <div class="recepts__ind-title">Микрозелень</div>
+                                                <div class="recepts__ind-text">по вкусу</div>
+                                            </div>
+                                            <div class="recepts__ind">
+                                                <div class="recepts__ind-img">
+                                                    <img src="../img/recept/ind-7.svg" alt="">
+                                                </div>
+                                                <div class="recepts__ind-title">соль</div>
+                                                <div class="recepts__ind-text">по вкусу</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="recepts__title-mob">
+                                        <span>пицца с ананасами</span>
+                                    </div>
+                                    <div class="recepts__center">
+                                            <a href="/link_for_prev_recipe ссылки дублируются для адаптива, нужно заменить и вдругом месте. ищи по англ надписи в ссылке" class="recept-prev recept-button recept-button-mob"></a>
+                                        <div class="recepts__img">
+
+                                            <img src="../img/recept/pizza.jpg" alt="">
+                                        </div>
+                                            <a href="/link_for_prev_recipe ссылки дублируются для адаптива, нужно заменить и вдругом месте. ищи по англ надписи в ссылке" class="recept-next recept-button recept-button-mob"></a>
+                                    </div>
+                                    <div class="recepts__right scrollbar-macosx">
+                                        <div class="recepts__step">
+                                            <div class="recepts__step-title">Шаг 1</div>
+                                            <div class="recepts__step-text">Снимите цедру и выжмите сок из одного лайма, а второй нарежьте дольками. Лук очистите и нарежьте тонкими полукольцами. Кинзу измельчите.</div>
+                                        </div>
+                                        <div class="recepts__step">
+                                            <div class="recepts__step-title">Шаг 2</div>
+                                            <div class="recepts__step-text">Выложите в сотейник креветки и цедру лайма, посолите и прогревайте 1–2 минуты. Затем жарьте 4 минуты креветки, полив сковороду заправкой «Французские пряности и чеснок».</div>
+                                        </div>
+                                        <div class="recepts__step">
+                                            <div class="recepts__step-title">Шаг 3</div>
+                                            <div class="recepts__step-text">Обжаривайте тортильи на сухой сковороде по 1 минуте с каждой стороны. Выложите лепешки на тарелки, посыпьте красным луком, сбрызните соком лайма и салатной заправкой «Французские пряности и чеснок».</div>
+                                        </div>
+                                        <div class="recepts__step">
+                                            <div class="recepts__step-title">Шаг 4</div>
+                                            <div class="recepts__step-text">Сверху на каждую лепешку положите по три креветки и измельченную кинзу. Сложите лепешки пополам подавайте с дольками лайма, украсив микрозеленью.</div>
+                                        </div>
+                                        <div class="recepts-info">* на 6 персон</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="recepts__slide swiper-slide">
+                                <div class="recepts__title">
+                                    <div class="recept-prev recept-button"></div>
+                                    <span>пицца с ананасами</span>
+                                    <div class="recept-next recept-button"></div>
+                                </div>
+                                <div class="recepts__flex">
+                                    <div class="recepts__left scrollbar-macosx">
+                                        <div class="recepts__col">
+                                            <div class="recepts__ind">
+                                                <div class="recepts__ind-img">
+                                                    <img src="../img/recept/ind-main.svg" alt="">
+                                                </div>
+                                                <div class="recepts__ind-title">салатная заправка <span class="recepts__ind-title-product-name">«Французские пряности и чеснок»</span>
+                                                    </div>
+                                                <div class="recepts__ind-text">6 ст.л.</div>
+                                            </div>
+                                            <div class="recepts__ind">
+                                                <div class="recepts__ind-img">
+                                                    <img src="../img/recept/ind-1.svg" alt="">
+                                                </div>
+                                                <div class="recepts__ind-title">лайм</div>
+                                                <div class="recepts__ind-text">2 шт.</div>
+                                            </div>
+                                            <div class="recepts__ind">
+                                                <div class="recepts__ind-img">
+                                                    <img src="../img/recept/ind-2.svg" alt="">
+                                                </div>
+                                                <div class="recepts__ind-title">лук красный</div>
+                                                <div class="recepts__ind-text">1 шт.</div>
+                                            </div>
+                                            <div class="recepts__ind">
+                                                <div class="recepts__ind-img">
+                                                    <img src="../img/recept/ind-3.svg" alt="">
+                                                </div>
+                                                <div class="recepts__ind-title">Кинза</div>
+                                                <div class="recepts__ind-text">4 веточки</div>
+                                            </div>
+
+                                            <div class="recepts__ind">
+                                                <div class="recepts__ind-img">
+                                                    <img src="../img/recept/ind-4.svg" alt="">
+                                                </div>
+                                                <div class="recepts__ind-title">Креветки</div>
+                                                <div class="recepts__ind-text">12 шт.</div>
+                                            </div>
+                                            <div class="recepts__ind">
+                                                <div class="recepts__ind-img">
+                                                    <img src="../img/recept/ind-5.svg" alt="">
+                                                </div>
+                                                <div class="recepts__ind-title">Тортилья</div>
+                                                <div class="recepts__ind-text">4 шт.</div>
+                                            </div>
+                                            <div class="recepts__ind">
+                                                <div class="recepts__ind-img">
+                                                    <img src="../img/recept/ind-6.svg" alt="">
+                                                </div>
+                                                <div class="recepts__ind-title">Микрозелень</div>
+                                                <div class="recepts__ind-text">по вкусу</div>
+                                            </div>
+                                            <div class="recepts__ind">
+                                                <div class="recepts__ind-img">
+                                                    <img src="../img/recept/ind-7.svg" alt="">
+                                                </div>
+                                                <div class="recepts__ind-title">соль</div>
+                                                <div class="recepts__ind-text">по вкусу</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="recepts__title-mob">
+                                        <span>пицца с ананасами</span>
+                                    </div>
+                                    <div class="recepts__center">
+                                            <a href="/link_for_prev_recipe ссылки дублируются для адаптива, нужно заменить и вдругом месте. ищи по англ надписи в ссылке" class="recept-prev recept-button recept-button-mob"></a>
+                                        <div class="recepts__img">
+
+                                            <img src="../img/recept/pizza.jpg" alt="">
+                                        </div>
+                                            <a href="/link_for_prev_recipe ссылки дублируются для адаптива, нужно заменить и вдругом месте. ищи по англ надписи в ссылке" class="recept-next recept-button recept-button-mob"></a>
+                                    </div>
+                                    <div class="recepts__right scrollbar-macosx">
+                                        <div class="recepts__step">
+                                            <div class="recepts__step-title">Шаг 1</div>
+                                            <div class="recepts__step-text">Снимите цедру и выжмите сок из одного лайма, а второй нарежьте дольками. Лук очистите и нарежьте тонкими полукольцами. Кинзу измельчите.</div>
+                                        </div>
+                                        <div class="recepts__step">
+                                            <div class="recepts__step-title">Шаг 2</div>
+                                            <div class="recepts__step-text">Выложите в сотейник креветки и цедру лайма, посолите и прогревайте 1–2 минуты. Затем жарьте 4 минуты креветки, полив сковороду заправкой «Французские пряности и чеснок».</div>
+                                        </div>
+                                        <div class="recepts__step">
+                                            <div class="recepts__step-title">Шаг 3</div>
+                                            <div class="recepts__step-text">Обжаривайте тортильи на сухой сковороде по 1 минуте с каждой стороны. Выложите лепешки на тарелки, посыпьте красным луком, сбрызните соком лайма и салатной заправкой «Французские пряности и чеснок».</div>
+                                        </div>
+                                        <div class="recepts__step">
+                                            <div class="recepts__step-title">Шаг 4</div>
+                                            <div class="recepts__step-text">Сверху на каждую лепешку положите по три креветки и измельченную кинзу. Сложите лепешки пополам подавайте с дольками лайма, украсив микрозеленью.</div>
+                                        </div>
+                                        <div class="recepts-info">* на 6 персон</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="recepts__slide swiper-slide">
+                                <div class="recepts__title">
+                                    <div class="recept-prev recept-button"></div>
+                                    <span>пицца с ананасами</span>
+                                    <div class="recept-next recept-button"></div>
+                                </div>
+                                <div class="recepts__flex">
+                                    <div class="recepts__left scrollbar-macosx">
+                                        <div class="recepts__col">
+                                            <div class="recepts__ind">
+                                                <div class="recepts__ind-img">
+                                                    <img src="../img/recept/ind-main.svg" alt="">
+                                                </div>
+                                                <div class="recepts__ind-title">салатная заправка <span class="recepts__ind-title-product-name">«Французские пряности и чеснок»</span>
+                                                    </div>
+                                                <div class="recepts__ind-text">6 ст.л.</div>
+                                            </div>
+                                            <div class="recepts__ind">
+                                                <div class="recepts__ind-img">
+                                                    <img src="../img/recept/ind-1.svg" alt="">
+                                                </div>
+                                                <div class="recepts__ind-title">лайм</div>
+                                                <div class="recepts__ind-text">2 шт.</div>
+                                            </div>
+                                            <div class="recepts__ind">
+                                                <div class="recepts__ind-img">
+                                                    <img src="../img/recept/ind-2.svg" alt="">
+                                                </div>
+                                                <div class="recepts__ind-title">лук красный</div>
+                                                <div class="recepts__ind-text">1 шт.</div>
+                                            </div>
+                                            <div class="recepts__ind">
+                                                <div class="recepts__ind-img">
+                                                    <img src="../img/recept/ind-3.svg" alt="">
+                                                </div>
+                                                <div class="recepts__ind-title">Кинза</div>
+                                                <div class="recepts__ind-text">4 веточки</div>
+                                            </div>
+
+                                            <div class="recepts__ind">
+                                                <div class="recepts__ind-img">
+                                                    <img src="../img/recept/ind-4.svg" alt="">
+                                                </div>
+                                                <div class="recepts__ind-title">Креветки</div>
+                                                <div class="recepts__ind-text">12 шт.</div>
+                                            </div>
+                                            <div class="recepts__ind">
+                                                <div class="recepts__ind-img">
+                                                    <img src="../img/recept/ind-5.svg" alt="">
+                                                </div>
+                                                <div class="recepts__ind-title">Тортилья</div>
+                                                <div class="recepts__ind-text">4 шт.</div>
+                                            </div>
+                                            <div class="recepts__ind">
+                                                <div class="recepts__ind-img">
+                                                    <img src="../img/recept/ind-6.svg" alt="">
+                                                </div>
+                                                <div class="recepts__ind-title">Микрозелень</div>
+                                                <div class="recepts__ind-text">по вкусу</div>
+                                            </div>
+                                            <div class="recepts__ind">
+                                                <div class="recepts__ind-img">
+                                                    <img src="../img/recept/ind-7.svg" alt="">
+                                                </div>
+                                                <div class="recepts__ind-title">соль</div>
+                                                <div class="recepts__ind-text">по вкусу</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="recepts__title-mob">
+                                        <span>пицца с ананасами</span>
+                                    </div>
+                                    <div class="recepts__center">
+                                            <a href="/link_for_prev_recipe ссылки дублируются для адаптива, нужно заменить и вдругом месте. ищи по англ надписи в ссылке" class="recept-prev recept-button recept-button-mob"></a>
+                                        <div class="recepts__img">
+
+                                            <img src="../img/recept/pizza.jpg" alt="">
+                                        </div>
+                                            <a href="/link_for_prev_recipe ссылки дублируются для адаптива, нужно заменить и вдругом месте. ищи по англ надписи в ссылке" class="recept-next recept-button recept-button-mob"></a>
+                                    </div>
+                                    <div class="recepts__right scrollbar-macosx">
+                                        <div class="recepts__step">
+                                            <div class="recepts__step-title">Шаг 1</div>
+                                            <div class="recepts__step-text">Снимите цедру и выжмите сок из одного лайма, а второй нарежьте дольками. Лук очистите и нарежьте тонкими полукольцами. Кинзу измельчите.</div>
+                                        </div>
+                                        <div class="recepts__step">
+                                            <div class="recepts__step-title">Шаг 2</div>
+                                            <div class="recepts__step-text">Выложите в сотейник креветки и цедру лайма, посолите и прогревайте 1–2 минуты. Затем жарьте 4 минуты креветки, полив сковороду заправкой «Французские пряности и чеснок».</div>
+                                        </div>
+                                        <div class="recepts__step">
+                                            <div class="recepts__step-title">Шаг 3</div>
+                                            <div class="recepts__step-text">Обжаривайте тортильи на сухой сковороде по 1 минуте с каждой стороны. Выложите лепешки на тарелки, посыпьте красным луком, сбрызните соком лайма и салатной заправкой «Французские пряности и чеснок».</div>
+                                        </div>
+                                        <div class="recepts__step">
+                                            <div class="recepts__step-title">Шаг 4</div>
+                                            <div class="recepts__step-text">Сверху на каждую лепешку положите по три креветки и измельченную кинзу. Сложите лепешки пополам подавайте с дольками лайма, украсив микрозеленью.</div>
+                                        </div>
+                                        <div class="recepts-info">* на 6 персон</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="../js/libs.min.js"></script>
+    <script src="../js/main.js"></script>
+
+</body>
+</html>
