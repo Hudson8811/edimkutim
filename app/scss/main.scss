@@ -1614,7 +1614,15 @@ footer {
 .recepts__ind-title-product-name {
     display: inline;
 }
+.recepts-info{
 
+    font-size: 1.2vw;
+    line-height: 1.3vw;
+    font-weight: bold;
+    text-align: left;
+    color: #444444;
+width: 100%;
+}
 .recepts {
     box-sizing: border-box;
     padding-top: vw(60);
@@ -1734,12 +1742,20 @@ footer {
     &__left {
         width: vw(470);
         display: flex;
-        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
         padding-top: vw(40);
         box-sizing: border-box;
         height: 100%;
         overflow: auto;
         height: auto;
+
+        height: auto;
+        overflow: visible;
+
+        @media screen and (min-width:1024px) {
+            padding-top: .08333vw;
+        }
 
         @include for-md() {
             width: 100%;
@@ -1766,6 +1782,7 @@ footer {
     &__right {
         width: vw(570);
         margin-left: vw(44);
+
         height: 100%;
         overflow: auto;
 
@@ -1822,11 +1839,11 @@ footer {
     }
 
     &__ind {
-        width: 50%;
+        width: 33%;
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-bottom: vw(20);
+        margin-bottom: 1.04167vw;
 
         @include for-md() {
             width: vw2(100);
@@ -1844,7 +1861,7 @@ footer {
         }
 
         +.recepts__ind {
-            margin-top: vw(25);
+            margin-top: 0;
 
             @include for-md() {
                 margin-top: 0;
@@ -1866,8 +1883,8 @@ footer {
         }
 
         &-title {
-            font-size: vw(30);
-            line-height: vw(30);
+            font-size: 1.2vw;
+            line-height: 1.3vw;
             font-weight: bold;
             text-align: center;
             text-transform: uppercase;
@@ -1909,6 +1926,7 @@ footer {
         width: 100%;
         height: 100%;
         position: relative;
+
         img {
             display: block;
             width: 100%;
