@@ -1614,15 +1614,26 @@ footer {
 .recepts__ind-title-product-name {
     display: inline;
 }
-.recepts-info{
 
+.recepts-info {
+    display: block;
     font-size: 1.2vw;
     line-height: 1.3vw;
     font-weight: bold;
     text-align: left;
     color: #444444;
-width: 100%;
+    width: 100%;
+    box-sizing: border-box;
+
+    @media screen and (max-width: 1024px) {
+        margin-bottom: 5vw;
+        font-size: 4.8vw;
+        line-height: 4.8vw;
+        padding: 0 2.93333vw 0 !important;
+
+    }
 }
+
 .recepts {
     box-sizing: border-box;
     padding-top: vw(60);
