@@ -6,3 +6,4 @@ app/debug.log
 .idea/misc.xml
 .idea/edimkutim.iml
 app/css/main.min — копия.css
+*.css
